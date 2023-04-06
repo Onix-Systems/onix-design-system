@@ -1,0 +1,17 @@
+@import "src/sass/variables";
+@import "src/sass/mixins";
+
+.button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  min-height: 48px;
+
+  span {
+    @include font()
+  }
+
+  &:hover {
+    background: gray;
+  }
+}

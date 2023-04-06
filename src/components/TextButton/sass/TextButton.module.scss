@@ -1,0 +1,12 @@
+@import "src/sass/variables";
+@import "src/sass/mixins";
+
+.button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.label {
+  @include font($vaultedPrimary)
+}

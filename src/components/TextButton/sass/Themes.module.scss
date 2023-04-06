@@ -1,0 +1,24 @@
+@import "src/sass/variables";
+
+@mixin getButtonTheme($color) {
+  span {
+    color: $color;
+  }
+}
+
+$themes: (
+  vaulted: (
+    $vaultedPrimary,
+  ),
+  bnns: (
+    $vaultedSecondary,
+  ),
+);
+
+.theme {
+  @each $theme, $style in $themes {
+    &_#{$theme} {
+      @include getButtonTheme(nth($style, 1));
+    }
+  }
+}

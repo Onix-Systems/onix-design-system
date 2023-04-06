@@ -1,0 +1,18 @@
+@mixin font($color: false, $fontSize: 15, $lineHeight: 19, $fontWeight: false, $theme: 'vaulted') {
+  font-size: $fontSize + px;
+  line-height: $lineHeight + px;
+
+  @if $theme == 'bnns' {
+    font-family: Arial, Helvetica, sans-serif;
+  } @else {
+    font-family: Yantramanav, sans-serif;
+  }
+
+
+  @if $color {
+    color: $color
+  }
+  @if $fontWeight {
+    font-weight: $fontWeight;
+  }
+}
