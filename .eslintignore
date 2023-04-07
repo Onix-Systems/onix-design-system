@@ -4,3 +4,7 @@
 __mocks__
 /dist
 /storybook-static
+/src/index.ts
+/src/components/index.ts
+rollup.config.js
+babel.config.js
