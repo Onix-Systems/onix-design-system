@@ -1,6 +1,6 @@
 import React, { FC, memo } from 'react';
-import IIconButton from './interfaces/IIconButton';
-import { cn } from '../../utils/helpers';
+import { IIconButton } from './interfaces/IIconButton';
+import { cn } from '../../utils';
 import styles from './sass/IconButton.module.scss';
 
 const IconButton: FC<IIconButton> = ({

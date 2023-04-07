@@ -8,4 +8,4 @@ export const cn = (...classes: Array<string | boolean | undefined>): string => {
   return stringArray.join(' ');
 };
 
-export default cn;
+export default { cn };

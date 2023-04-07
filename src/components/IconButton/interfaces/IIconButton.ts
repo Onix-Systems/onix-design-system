@@ -1,6 +1,6 @@
 import { IStaticImageData } from '../../../interfaces/general';
 
-export default interface IIconButton {
+export interface IIconButton {
   icon: string | IStaticImageData
   width?: number
   height?: number

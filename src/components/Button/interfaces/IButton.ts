@@ -1,9 +1,9 @@
-import { IThemes } from '../../../interfaces';
+import { Themes } from '../../../constants/defines';
 
-export default interface IButtonProps {
+export interface IButtonProps {
   label: string
   onPress: () => void
-  theme?: IThemes
+  themeName?: Themes
   isDisabled?: boolean
   customClass?: string
 }

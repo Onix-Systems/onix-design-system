@@ -1,6 +1,6 @@
 export enum Themes {
-  VAULTED = 'vaulted',
-  BNNS = 'bnns',
+  MAIN = 'MAIN',
+  SECONDARY = 'SECONDARY',
 }
 
-export default Themes;
+export default { Themes };
