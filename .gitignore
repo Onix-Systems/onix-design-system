@@ -2,6 +2,7 @@
 /node_modules
 .idea
 storybook-static
+dist
 /.pnp
 .pnp.js
 
