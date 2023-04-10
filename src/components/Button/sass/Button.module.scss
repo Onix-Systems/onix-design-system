@@ -1,15 +1,109 @@
+@import "../../../sass/colors";
+
 .button {
+  color: $white;
+  background-color: $primary;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
   border: none;
   outline: none;
-  min-height: 48px;
-  background: red;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 24px;
 
-  &:hover {
-    background: gray;
+  &.contained {
+    &.primary {
+      background-color: $primary;
+
+      &:hover {
+        transition: background-color .5s,color .5s,border .5s;
+        background-color: $primary-hover;
+      }
+    }
+
+    &.warning {
+      background-color: $warning;
+
+      &:hover {
+        transition: background-color .5s,color .5s,border .5s;
+        background-color: $warning-hover;
+      }
+    }
+
+    &.error {
+      background-color: $error;
+    }
   }
-}
 
-.SECONDARY {
-  background: blue;
+  &.text {
+    background-color: $transparent;
+
+    &.primary {
+      color: $primary;
+    }
+
+    &.warning {
+      color: $warning;
+    }
+
+    &.error {
+      color: $error;
+    }
+  }
+
+  &.outlined {
+    background-color: $transparent;
+    border: 1px solid;
+
+    &.primary {
+      border-color: $light-gray;
+      color: $primary;
+    }
+
+    &.warning {
+      border-color: $warning;
+      color: $warning;
+    }
+
+    &.error {
+      border-color: $error;
+      color: $error;
+
+      &:hover {
+        background-color: $error-background;
+      }
+    }
+  }
+
+  &.small {
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &.big {
+    padding: 11px 16px;
+  }
+
+  &.large {
+    padding: 12px 28px;
+  }
+
+  &.disabled {
+    cursor: default;
+    background: $light-gray!important;
+    color: $gray!important;
+  }
+
+  .iconLeft {
+    margin-right: 12px;
+  }
+
+  .iconRight {
+    margin-left: 12px;
+  }
 }

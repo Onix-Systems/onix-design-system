@@ -3,17 +3,30 @@ import { IButtonProps } from './interfaces/IButton';
 import styles from './sass/Button.module.scss';
 
 const Button: FC<IButtonProps> = ({
-  label,
-  isDisabled = false,
+  label = '',
+  disabled = false,
   onPress,
+  variant = 'contained',
+  color = 'primary',
+  size = 'medium',
+  iconLeft = null,
+  iconRight = null,
 }) => (
   <button
-    className={styles.button}
+    className={`
+      ${styles.button}
+      ${styles[variant]}
+      ${styles[color]}
+      ${disabled ? styles.disabled : ''}
+      ${styles[size]}
+    `}
     onClick={onPress}
-    disabled={isDisabled}
+    disabled={disabled}
     type="button"
   >
-    <span>{label}</span>
+    {iconLeft && <img className={styles.iconLeft} src={iconLeft} alt={label || ''} />}
+    {label && <span>{label}</span>}
+    {iconRight && <img className={styles.iconRight} src={iconRight} alt={label || ''} />}
   </button>
 );
 
