@@ -2,6 +2,12 @@
   "name": "onix-hydra-design-system",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@hookform/resolvers": "^3.0.0",
     "@reduxjs/toolkit": "^1.9.3",
