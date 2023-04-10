@@ -1,28 +1,15 @@
-@import "src/sass/variables";
-@import "src/sass/mixins";
-
-// default theme = MAIN
 .button {
   cursor: pointer;
   border: none;
   outline: none;
   min-height: 48px;
-  background: $primary;
-
-  span {
-    @include font($secondary);
-  }
+  background: red;
 
   &:hover {
     background: gray;
   }
 }
 
-// theme = SECONDARY
 .SECONDARY {
-  background: $secondary;
-
-  span {
-    @include font($primary);
-  }
+  background: blue;
 }
