@@ -75,6 +75,8 @@
 
       &:hover {
         transition: background-color .5s,color .5s,border .5s;
+        background: $warning-hover;
+        opacity: 70%;
       }
     }
 
