@@ -8,4 +8,5 @@ export interface IButtonProps {
   size: 'small' | 'medium' | 'big' | 'large',
   iconLeft?: string,
   iconRight?: string,
+  buttonClass?: string,
 }

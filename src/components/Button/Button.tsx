@@ -11,14 +11,16 @@ const Button: FC<IButtonProps> = ({
   size = 'medium',
   iconLeft = null,
   iconRight = null,
+  buttonClass = '',
 }) => (
   <button
     className={`
       ${styles.button}
       ${styles[variant]}
       ${styles[color]}
-      ${disabled ? styles.disabled : ''}
       ${styles[size]}
+      ${disabled ? styles.disabled : ''}
+      ${buttonClass}
     `}
     onClick={onPress}
     disabled={disabled}
