@@ -1,13 +1,13 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import VerticalArrow from '../components/VerticalArrow/VerticalArrow';
+import Arrow from '../components/Arrow/Arrow';
 
 export default {
-  title: 'Example/VerticalArrow',
-  component: VerticalArrow,
-} as ComponentMeta<typeof VerticalArrow>;
+  title: 'Example/Arrow',
+  component: Arrow,
+} as ComponentMeta<typeof Arrow>;
 
-const Template: ComponentStory<typeof VerticalArrow> = (args) => <VerticalArrow {...args} />;
+const Template: ComponentStory<typeof Arrow> = (args) => <Arrow {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
