@@ -1,0 +1,61 @@
+@import "../../../sass/colors";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+
+  &.contained {
+    background: $white;
+
+    &:hover {
+      background: $outlined-hover;
+    }
+
+    &:active {
+      background: $primary;
+
+      .closeIcon {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+
+  &.outlined {
+
+    &:hover {
+      background: $outlined-hover;
+    }
+
+    &:active {
+      background: $white;
+      .closeIcon {
+        filter: invert(37%) sepia(78%) saturate(5713%) hue-rotate(205deg) brightness(103%) contrast(105%);
+      }
+    }
+  }
+
+  &.contained-red {
+    width: 16px;
+    height: 16px;
+
+    .closeIcon {
+      width: 12px;
+      height: 12px;
+    }
+
+    &:hover {
+      background: $error-background;
+    }
+
+    &:active {
+      background: $white;
+    }
+  }
+}
