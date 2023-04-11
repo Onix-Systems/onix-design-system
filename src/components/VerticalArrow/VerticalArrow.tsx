@@ -1,10 +1,10 @@
 import React, { FC, memo } from 'react';
-import { IHorizontalArrow } from './interfaces/IHorizontalArrow';
-import styles from './sass/HorizontalArrow.module.scss';
+import { IVerticalArrowProps } from './interfaces/VerticalArrow';
+import styles from './sass/VerticalArrow.module.scss';
 
-import ArrowUpIcon from '../../assets/icons/horizontalArrowUp.svg';
+import ArrowUpIcon from '../../assets/icons/verticalArrowUp.svg';
 
-const HorizontalArrow: FC<IHorizontalArrow> = ({
+const VerticalArrow: FC<IVerticalArrowProps> = ({
   arrowDirection = 'up',
   alt = 'arrow',
   customClass = '',
@@ -14,4 +14,4 @@ const HorizontalArrow: FC<IHorizontalArrow> = ({
   </button>
 );
 
-export default memo(HorizontalArrow);
+export default memo(VerticalArrow);
