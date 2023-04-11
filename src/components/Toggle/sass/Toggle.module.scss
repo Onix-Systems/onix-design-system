@@ -1,0 +1,66 @@
+@import "../../../sass/colors";
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  .control {
+    width: 49px;
+    height: 26px;
+    position: relative;
+    display: inline-block;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked + {
+        .slider {
+          background-color: $primary;
+
+          &:before {
+            background-color: #EBEEF2;
+            -webkit-transform: translateX(23px);
+            -ms-transform: translateX(23px);
+            transform: translateX(23px);
+          }
+        }
+      }
+
+      &:disabled + {
+        .slider {
+          pointer-events: none;
+        }
+      }
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 52px;
+      background-color: $light-gray;
+      -webkit-transition: .4s;
+      transition: .4s;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 22px;
+        width: 22px;
+        left: 2px;
+        bottom: 2px;
+        background-color: $gray;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
