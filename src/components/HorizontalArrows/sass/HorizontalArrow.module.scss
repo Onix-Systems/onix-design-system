@@ -1,0 +1,21 @@
+@import "../../../sass/colors";
+
+.buttonArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  height: 20px;
+  width: 20px;
+
+  &:hover {
+    background: $outlined-hover;
+    border-radius: 4px;
+  }
+
+  .arrowDown {
+    rotate: 180deg;
+  }
+}
