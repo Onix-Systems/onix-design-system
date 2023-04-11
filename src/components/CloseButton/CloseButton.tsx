@@ -1,11 +1,11 @@
 import React, { FC, memo } from 'react';
-import { ICloseButton } from './interfaces/ICloseButton';
+import { ICloseButtonProps } from './interfaces/ICloseButton';
 import styles from './sass/CloseButton.module.scss';
 
 import CloseIcon from '../../assets/icons/close.svg';
 import CloseRedIcon from '../../assets/icons/closeRed.svg';
 
-const CloseButton: FC<ICloseButton> = ({
+const CloseButton: FC<ICloseButtonProps> = ({
   onClick,
   alt = 'close',
   variant = 'outlined',
