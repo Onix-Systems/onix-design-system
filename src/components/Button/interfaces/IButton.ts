@@ -1,4 +1,4 @@
-import { EColors, EVariants, EButtonSizes } from '../../../constants/tsConstants';
+import { Colors, Variants, ButtonSizes } from '../../../constants/general';
 
 export interface IButtonProps {
   text?: string,
@@ -8,9 +8,9 @@ export interface IButtonProps {
   onClick?: () => void,
   onMouseEnter?: () => void,
   onMouseLeave?: () => void,
-  variant: EVariants,
-  color: EColors,
-  size: EButtonSizes,
+  variant: Variants,
+  color: Colors,
+  size: ButtonSizes,
   iconLeft?: string,
   iconRight?: string,
   className?: string,

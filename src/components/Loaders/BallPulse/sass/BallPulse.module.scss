@@ -3,31 +3,31 @@
 .wrapper {
   display: flex;
 
-  &.white {
+  &.WHITE {
     > div {
       background-color: $white;
     }
   }
 
-  &.primary {
+  &.PRIMARY {
     > div {
       background-color: $primary;
     }
   }
 
-  &.success {
+  &.SUCCESS {
     > div {
       background-color: $success;
     }
   }
 
-  &.warning {
+  &.WARNING {
     > div {
       background-color: $warning;
     }
   }
 
-  &.error {
+  &.ERROR {
     > div {
       background-color: $error;
     }
