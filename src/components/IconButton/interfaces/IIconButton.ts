@@ -5,4 +5,5 @@ export interface IIconButtonProps {
   variant?: 'outlined' | 'outlined-active' | 'contained' | 'contained-red' | 'contained-primary',
   alt?: string,
   customClass?: string,
+  disabled?: boolean,
 }

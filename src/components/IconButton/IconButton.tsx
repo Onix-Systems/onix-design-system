@@ -11,9 +11,10 @@ const IconButton: FC<IIconButtonProps> = ({
   variant = 'outlined',
   size = 'medium',
   customClass = '',
+  disabled = false,
 }) => (
   <button
-    className={`${styles.button} ${styles[variant]} ${styles[size]} ${customClass}`}
+    className={`${styles.button} ${styles[variant]} ${styles[size]} ${disabled ? styles.disabled : ''} ${customClass}`}
     onClick={onClick}
     type="button"
   >

@@ -8,8 +8,6 @@
   background-color: $transparent;
   padding: 0;
   border-radius: 4px;
-  min-width: fit-content;
-  min-height: fit-content;
 
   &.contained {
     background-color: $transparent;
@@ -84,5 +82,17 @@
   &.big {
     width: 32px;
     height: 32px;
+  }
+
+  &:disabled,
+  &.disabled:hover,
+  &.disabled:active {
+    background-color: $light-gray;
+    cursor: not-allowed;
+    color: $disabled;
+
+    .icon {
+      filter: initial;
+    }
   }
 }
