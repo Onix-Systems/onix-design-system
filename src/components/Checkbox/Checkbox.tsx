@@ -7,8 +7,8 @@ const Checkbox: FC<ICheckbox> = ({
   customClass = '',
   checked,
   disabled = false,
-  label = '',
-  onChange,
+  text = '',
+  ...props
 }) => (
   <label htmlFor={id} className={`${styles.labelContainer} ${disabled ? styles.disabled : ''} ${customClass}`}>
     <span className={`${styles.checkbox} ${checked ? styles.checked : ''}`}>
@@ -17,12 +17,12 @@ const Checkbox: FC<ICheckbox> = ({
         type="checkbox"
         checked={checked}
         className={styles.input}
-        onChange={onChange}
         disabled={disabled}
+        {...props}
       />
       <span className={styles.checkmark} />
     </span>
-    {label && <span className={styles.label}>{label}</span>}
+    {text && <span className={styles.label}>{text}</span>}
   </label>
 );
 

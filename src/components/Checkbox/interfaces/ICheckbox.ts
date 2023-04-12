@@ -1,10 +1,8 @@
-import { ChangeEvent } from 'react';
+import { ComponentPropsWithRef } from 'react';
 
-export interface ICheckbox {
+export interface ICheckbox extends ComponentPropsWithRef<'input'> {
   id: string,
   customClass?: string
-  checked?: boolean
-  disabled?: boolean
-  label?: string,
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void
+  checked?: boolean,
+  text?: string,
 }
