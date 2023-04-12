@@ -1,9 +1,11 @@
+import { EIconButtonVariants, ESizes } from '../../../constants/tsConstants';
+
 export interface IIconButtonProps {
   icon: string,
   onClick?: () => void,
-  size?: 'small' | 'medium' | 'big',
-  variant?: 'outlined' | 'outlined-active' | 'contained' | 'contained-red' | 'contained-primary',
+  size?: ESizes,
+  variant?: EIconButtonVariants,
   alt?: string,
-  customClass?: string,
   disabled?: boolean,
+  className?: string,
 }

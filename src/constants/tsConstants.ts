@@ -16,7 +16,7 @@ export enum EColors {
   ERROR = 'error',
 }
 
-enum EButtonSizesExtender {
+export enum EButtonSizesExtender {
   LARGE = 'large',
 }
 
@@ -28,3 +28,11 @@ export enum EBallPulseColorsExtender {
 }
 
 export type EBallPulseColors = EColors | EBallPulseColorsExtender;
+
+export enum EIconButtonVariants {
+  OUTLINED = 'outlined',
+  OUTLINED_ACTIVE = 'outlined-active',
+  CONTAINED = 'contained',
+  CONTAINED_RED = 'contained-red',
+  CONTAINED_PRIMARY = 'contained-primary',
+}

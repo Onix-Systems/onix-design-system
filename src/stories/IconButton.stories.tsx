@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import IconButton from '../components/IconButton/IconButton';
 
 import CloseIcon from '../assets/icons/close.svg';
@@ -14,6 +14,5 @@ const Template: ComponentStory<typeof IconButton> = (args) => <IconButton {...ar
 export const Default = Template.bind({});
 Default.args = {
   variant: 'outlined',
-  size: 'medium',
   icon: CloseIcon,
 };
