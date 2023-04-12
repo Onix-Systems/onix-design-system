@@ -1,7 +1,7 @@
 @import '../../../sass/colors';
+@import '../../../sass/main';
 
 .badge {
-  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -37,6 +37,6 @@
   &.round {
     border-radius: 100px;
     min-width: 84px;
-    padding: 0 10px;
+    padding: 0 4px;
   }
 }
