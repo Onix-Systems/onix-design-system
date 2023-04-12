@@ -1,8 +1,7 @@
-export interface IToggle {
+import { ComponentPropsWithRef } from 'react';
+
+export interface IToggle extends ComponentPropsWithRef<'input'> {
   name: string,
-  onChange: () => void,
   checked?: boolean,
-  disabled?: boolean,
-  ariaLabel?: string,
   label?: string,
 }

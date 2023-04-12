@@ -4,11 +4,8 @@ import styles from './sass/Toggle.module.scss';
 
 const Toggle: FC<IToggle> = ({
   name,
-  onChange,
-  checked = false,
-  disabled = false,
-  ariaLabel,
   label,
+  ...props
 }) => (
   <div className={styles.toggle}>
     {label && <span>{label}</span>}
@@ -17,10 +14,7 @@ const Toggle: FC<IToggle> = ({
         type="checkbox"
         name={name}
         id={name}
-        onChange={onChange}
-        checked={checked}
-        disabled={disabled}
-        aria-label={ariaLabel}
+        {...props}
       />
       <span className={styles.slider} />
     </label>
