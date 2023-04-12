@@ -4,13 +4,13 @@ import styles from './sass/Checkbox.module.scss';
 
 const Checkbox: FC<ICheckbox> = ({
   id,
-  customClass = '',
+  className = '',
   checked,
   disabled = false,
   text = '',
   ...props
 }) => (
-  <label htmlFor={id} className={`${styles.labelContainer} ${disabled ? styles.disabled : ''} ${customClass}`}>
+  <label htmlFor={id} className={`${styles.labelContainer} ${disabled ? styles.disabled : ''} ${className}`}>
     <span className={`${styles.checkbox} ${checked ? styles.checked : ''}`}>
       <input
         id={id}
