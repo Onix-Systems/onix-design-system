@@ -6,18 +6,15 @@ import BallPulse from '../Loaders/BallPulse/BallPulse';
 
 const Button: FC<IButtonProps> = ({
   text = '',
-  aliaLabel = '',
   disabled = false,
   isLoading = false,
-  onClick,
-  onMouseEnter,
-  onMouseLeave,
   variant = Variants.Contained,
   color = Colors.Primary,
   size = Sizes.Medium,
   iconLeft = null,
   iconRight = null,
   className = '',
+  ...props
 }) => {
   const loader = useMemo(() => (
     <BallPulse
@@ -28,7 +25,6 @@ const Button: FC<IButtonProps> = ({
 
   return (
     <button
-      aria-label={aliaLabel}
       type="button"
       className={`
       ${styles.button}
@@ -39,9 +35,7 @@ const Button: FC<IButtonProps> = ({
       ${className}
     `}
       disabled={disabled || isLoading}
-      onClick={onClick}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      {...props}
     >
       {iconLeft && <img className={styles.iconLeft} src={iconLeft} alt={text} />}
       {text && <span className={isLoading ? styles.loaderText : ''}>{text}</span>}
