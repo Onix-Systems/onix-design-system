@@ -1,12 +1,17 @@
+import { EColors, EVariants, EButtonSizes } from '../../../constants/tsConstants';
+
 export interface IButtonProps {
-  label?: string,
-  onPress: () => void,
+  text?: string,
+  aliaLabel?: string,
   disabled?: boolean,
-  styles?: string,
-  variant: 'text' | 'contained' | 'outlined',
-  color: 'primary' | 'warning' | 'error',
-  size: 'small' | 'medium' | 'big' | 'large',
+  isLoading?: boolean,
+  onClick?: () => void,
+  onMouseEnter?: () => void,
+  onMouseLeave?: () => void,
+  variant: EVariants,
+  color: EColors,
+  size: EButtonSizes,
   iconLeft?: string,
   iconRight?: string,
-  buttonClass?: string,
+  className?: string,
 }

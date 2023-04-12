@@ -1,9 +1,10 @@
 @import "../../../sass/colors";
+@import "../../../sass/main";
 
 .button {
+  position: relative;
   color: $white;
   background-color: $primary;
-  font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
@@ -18,18 +19,18 @@
   &.contained {
     &.primary {
       background-color: $primary;
+      transition: all .3s;
 
       &:hover {
-        transition: background-color .5s,color .5s,border .5s;
         background-color: $primary-hover;
       }
     }
 
     &.warning {
       background-color: $warning;
+      transition: all .3s;
 
       &:hover {
-        transition: background-color .5s,color .5s,border .5s;
         background-color: $warning-hover;
       }
     }
@@ -62,9 +63,9 @@
     &.primary {
       border-color: $light-gray;
       color: $primary;
+      transition: all .3s;
 
       &:hover {
-        transition: background-color .5s,color .5s,border .5s;
         background-color: $light-blue;
       }
     }
@@ -72,20 +73,19 @@
     &.warning {
       border-color: $warning;
       color: $warning;
+      transition: all .3s;
 
       &:hover {
-        transition: background-color .5s,color .5s,border .5s;
         background: $warning-hover;
-        opacity: 70%;
       }
     }
 
     &.error {
       border-color: $error;
       color: $error;
+      transition: all .3s;
 
       &:hover {
-        transition: background-color .5s,color .5s,border .5s;
         background-color: $error-background;
       }
     }
@@ -106,9 +106,22 @@
   }
 
   &.disabled {
-    cursor: default;
+    transition: initial;
+    cursor: not-allowed;
     background: $light-gray!important;
     color: $gray!important;
+    border: none;
+  }
+
+  .loaderText {
+    visibility: hidden;
+  }
+
+  .loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
   }
 
   .iconLeft {
