@@ -1,0 +1,23 @@
+import React, { FC, memo } from 'react';
+import { IIconButtonProps } from './interfaces/IIconButton';
+import styles from './sass/IconButton.module.scss';
+
+import CloseIcon from '../../assets/icons/close.svg';
+
+const IconButton: FC<IIconButtonProps> = ({
+  icon,
+  onClick,
+  alt = 'icon',
+  variant = 'outlined',
+  customClass = '',
+}) => (
+  <button
+    className={`${styles.button} ${styles[variant]} ${customClass}`}
+    onClick={onClick}
+    type="button"
+  >
+    <img className={styles.icon} src={icon || CloseIcon} alt={alt} />
+  </button>
+);
+
+export default memo(IconButton);
