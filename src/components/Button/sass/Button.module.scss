@@ -1,15 +1,134 @@
+@import "../../../sass/colors";
+@import "../../../sass/main";
+
 .button {
+  position: relative;
+  color: $white;
+  background-color: $primary;
+  font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
   border: none;
   outline: none;
-  min-height: 48px;
-  background: red;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 24px;
 
-  &:hover {
-    background: gray;
+  &.contained {
+    &.primary {
+      background-color: $primary;
+      transition: all .3s;
+
+      &:hover {
+        background-color: $primary-hover;
+      }
+    }
+
+    &.warning {
+      background-color: $warning;
+      transition: all .3s;
+
+      &:hover {
+        background-color: $warning-hover;
+      }
+    }
+
+    &.error {
+      background-color: $error;
+    }
   }
-}
 
-.SECONDARY {
-  background: blue;
+  &.text {
+    background-color: $transparent;
+
+    &.primary {
+      color: $primary;
+    }
+
+    &.warning {
+      color: $warning;
+    }
+
+    &.error {
+      color: $error;
+    }
+  }
+
+  &.outlined {
+    background-color: $transparent;
+    border: 1px solid;
+
+    &.primary {
+      border-color: $light-gray;
+      color: $primary;
+      transition: all .3s;
+
+      &:hover {
+        background-color: $light-blue;
+      }
+    }
+
+    &.warning {
+      border-color: $warning;
+      color: $warning;
+      transition: all .3s;
+
+      &:hover {
+        background: $warning-hover;
+      }
+    }
+
+    &.error {
+      border-color: $error;
+      color: $error;
+      transition: all .3s;
+
+      &:hover {
+        background-color: $error-background;
+      }
+    }
+  }
+
+  &.small {
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &.big {
+    padding: 11px 16px;
+  }
+
+  &.large {
+    padding: 12px 28px;
+  }
+
+  &.disabled {
+    transition: initial;
+    cursor: not-allowed;
+    background: $light-gray!important;
+    color: $gray!important;
+    border: none;
+  }
+
+  .loaderText {
+    visibility: hidden;
+  }
+
+  .loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .iconLeft {
+    margin-right: 12px;
+  }
+
+  .iconRight {
+    margin-left: 12px;
+  }
 }
