@@ -1,6 +1,7 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import Badge from '../components/Badge/Badge';
+import { EBadgeVariants } from '../constants/tsConstants';
 
 export default {
   title: 'Example/Badge',
@@ -11,6 +12,6 @@ const Template: ComponentStory<typeof Badge> = (args) => <Badge {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  variant: 'success',
+  variant: EBadgeVariants.SUCCESS,
   message: 'Success',
 };

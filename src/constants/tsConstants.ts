@@ -15,3 +15,10 @@ export enum EColors {
   WARNING = 'warning',
   ERROR = 'error',
 }
+
+export enum EBadgeVariants {
+  GRAY = 'gray',
+  SUCCESS = 'success',
+  WARNING = 'warning',
+  ERROR = 'error',
+}

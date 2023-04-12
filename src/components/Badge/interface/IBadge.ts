@@ -1,5 +1,7 @@
+import { EBadgeVariants } from '../../../constants/tsConstants';
+
 export interface IBadgeProps {
   message: string,
   customClass?: string,
-  variant: 'gray' | 'success' | 'warning' | 'error',
+  variant: EBadgeVariants,
 }
