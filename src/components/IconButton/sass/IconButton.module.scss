@@ -9,7 +9,7 @@
   padding: 0;
   border-radius: 4px;
 
-  &.contained {
+  &.CONTAINED {
     background-color: $transparent;
 
     &:hover {
@@ -25,11 +25,11 @@
     }
   }
 
-  &.outlined:hover {
+  &.OUTLINED:hover {
     background-color: $outlined-hover;
   }
 
-  &.outlined-active {
+  &.OUTLINED_ACTIVE {
 
     &:hover {
       background-color: $outlined-hover;
@@ -44,7 +44,7 @@
     }
   }
 
-  &.contained-red {
+  &.CONTAINED_RED {
     &:hover {
       background-color: $error-background;
     }
@@ -54,7 +54,7 @@
     }
   }
 
-  &.contained-primary {
+  &.CONTAINED_PRIMARY {
     &:hover {
       background-color: $primary;
 
@@ -68,18 +68,18 @@
     }
   }
 
-  &.small {
+  &.SMALL {
     width: 16px;
     height: 16px;
   }
 
-  &.medium {
+  &.MEDIUM {
     width: 24px;
     height: 24px;
 
   }
 
-  &.big {
+  &.BIG {
     width: 32px;
     height: 32px;
   }

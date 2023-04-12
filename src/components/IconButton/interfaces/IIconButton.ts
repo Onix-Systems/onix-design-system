@@ -1,10 +1,11 @@
-import { EIconButtonVariants, ESizes } from '../../../constants/tsConstants';
+import { ComponentPropsWithRef } from 'react';
+import { IconButtonVariants, Sizes } from '../../../constants/general';
 
-export interface IIconButtonProps {
+export interface IIconButtonProps extends ComponentPropsWithRef<'button'> {
   icon: string,
   onClick?: () => void,
-  size?: ESizes,
-  variant?: EIconButtonVariants,
+  size?: Sizes,
+  variant?: IconButtonVariants,
   alt?: string,
   disabled?: boolean,
   className?: string,

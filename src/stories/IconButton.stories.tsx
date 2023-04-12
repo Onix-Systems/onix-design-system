@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { IconButtonVariants } from '../constants/general';
 import IconButton from '../components/IconButton/IconButton';
-
 import CloseIcon from '../assets/icons/close.svg';
 
 export default {
@@ -13,6 +13,6 @@ const Template: ComponentStory<typeof IconButton> = (args) => <IconButton {...ar
 
 export const Default = Template.bind({});
 Default.args = {
-  variant: 'outlined',
+  variant: IconButtonVariants.Contained,
   icon: CloseIcon,
 };

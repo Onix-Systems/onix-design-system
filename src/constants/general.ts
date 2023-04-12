@@ -22,9 +22,20 @@ enum ButtonSizesExtender {
 
 export type ButtonSizes = Sizes | ButtonSizesExtender;
 
+export type BallPulseColors = Colors | BallPulseColorsExtender;
+
 export enum BallPulseColorsExtender {
   White = 'WHITE',
+  Primary = 'PRIMARY',
+  Warning = 'WARNING',
+  Error = 'ERROR',
   Success = 'SUCCESS',
 }
 
-export type BallPulseColors = Colors | BallPulseColorsExtender;
+export enum IconButtonVariants {
+  Outlined = 'OUTLINED',
+  OutlinedActive = 'OUTLINED_ACTIVE',
+  Contained = 'CONTAINED',
+  ContainedRed = 'CONTAINED_RED',
+  ContainedPrimary = 'CONTAINED_PRIMARY',
+}
