@@ -7,8 +7,6 @@
   border: none;
   background: $transparent;
   padding: 0;
-  width: 24px;
-  height: 24px;
   border-radius: 4px;
 
   &.contained {
@@ -43,14 +41,6 @@
   }
 
   &.contained-red {
-    width: 16px;
-    height: 16px;
-
-    .icon {
-      width: 12px;
-      height: 12px;
-    }
-
     &:hover {
       background: $error-background;
     }
@@ -58,5 +48,21 @@
     &:active {
       background: $transparent;
     }
+  }
+
+  &.small {
+    width: 16px;
+    height: 16px;
+  }
+
+  &.medium {
+    width: 24px;
+    height: 24px;
+
+  }
+
+  &.big {
+    width: 32px;
+    height: 32px;
   }
 }

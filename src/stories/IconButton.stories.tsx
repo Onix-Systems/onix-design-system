@@ -11,5 +11,5 @@ const Template: ComponentStory<typeof IconButton> = (args) => <IconButton {...ar
 export const Default = Template.bind({});
 Default.args = {
   variant: 'contained',
-  alt: '',
+  size: 'medium',
 };

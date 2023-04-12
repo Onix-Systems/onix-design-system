@@ -9,10 +9,11 @@ const IconButton: FC<IIconButtonProps> = ({
   onClick,
   alt = 'icon',
   variant = 'outlined',
+  size = 'medium',
   customClass = '',
 }) => (
   <button
-    className={`${styles.button} ${styles[variant]} ${customClass}`}
+    className={`${styles.button} ${styles[variant]} ${styles[size]} ${customClass}`}
     onClick={onClick}
     type="button"
   >
