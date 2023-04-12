@@ -9,9 +9,9 @@ const Bell: FC<IBellProps> = ({
   alt = 'bell',
   isActive = false,
   hasNotification = false,
-  customClass = '',
+  className = '',
 }) => (
-  <button className={`${styles.bellButton} ${customClass}`} type="button" onClick={onClick}>
+  <button className={`${styles.bellButton} ${className}`} type="button" onClick={onClick}>
     <img className={isActive ? `${styles.activeBell}` : ''} src={BellIcon} alt={alt} />
     {hasNotification && <div className={styles.notificationDot} />}
   </button>
