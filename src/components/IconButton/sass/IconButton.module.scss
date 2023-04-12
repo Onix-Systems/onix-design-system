@@ -5,19 +5,19 @@
   justify-content: center;
   align-items: center;
   border: none;
-  background: $transparent;
+  background-color: $transparent;
   padding: 0;
   border-radius: 4px;
 
   &.contained {
-    background: $transparent;
+    background-color: $transparent;
 
     &:hover {
-      background: $outlined-hover;
+      background-color: $outlined-hover;
     }
 
     &:active {
-      background: $primary;
+      background-color: $primary;
 
       .icon {
         filter: brightness(0) invert(1);
@@ -25,14 +25,18 @@
     }
   }
 
-  &.outlined {
+  &.outlined:hover {
+    background-color: $outlined-hover;
+  }
+
+  &.outlined-active {
 
     &:hover {
-      background: $outlined-hover;
+      background-color: $outlined-hover;
     }
 
     &:active {
-      background: $transparent;
+      background-color: $transparent;
 
       .icon {
         filter: invert(37%) sepia(78%) saturate(5713%) hue-rotate(205deg) brightness(103%) contrast(105%);
@@ -42,11 +46,25 @@
 
   &.contained-red {
     &:hover {
-      background: $error-background;
+      background-color: $error-background;
     }
 
     &:active {
-      background: $transparent;
+      background-color: $transparent;
+    }
+  }
+
+  &.contained-primary {
+    &:hover {
+      background-color: $primary;
+
+      .icon {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &:active {
+      background-color: $primary-active;
     }
   }
 

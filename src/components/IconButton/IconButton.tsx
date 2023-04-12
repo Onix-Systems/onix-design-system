@@ -17,7 +17,7 @@ const IconButton: FC<IIconButtonProps> = ({
     onClick={onClick}
     type="button"
   >
-    <img className={styles.icon} src={icon || CloseIcon} alt={alt} />
+    <img className={styles.icon} src={icon} alt={alt} />
   </button>
 );
 
