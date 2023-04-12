@@ -1,17 +1,12 @@
-import { EColors, EVariants, EButtonSizes } from '../../../constants/tsConstants';
+import { ComponentPropsWithRef } from 'react';
+import { Colors, Variants, ButtonSizes } from '../../../constants/general';
 
-export interface IButtonProps {
+export interface IButtonProps extends ComponentPropsWithRef<'button'> {
   text?: string,
-  aliaLabel?: string,
-  disabled?: boolean,
   isLoading?: boolean,
-  onClick?: () => void,
-  onMouseEnter?: () => void,
-  onMouseLeave?: () => void,
-  variant: EVariants,
-  color: EColors,
-  size: EButtonSizes,
+  variant: Variants,
+  color: Colors,
+  size: ButtonSizes,
   iconLeft?: string,
   iconRight?: string,
-  className?: string,
 }

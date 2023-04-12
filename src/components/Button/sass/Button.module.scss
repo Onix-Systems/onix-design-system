@@ -15,9 +15,10 @@
   justify-content: center;
   align-items: center;
   padding: 7px 24px;
+  min-width: 30px;
 
-  &.contained {
-    &.primary {
+  &.CONTAINED {
+    &.PRIMARY {
       background-color: $primary;
       transition: all .3s;
 
@@ -26,7 +27,7 @@
       }
     }
 
-    &.warning {
+    &.WARNING {
       background-color: $warning;
       transition: all .3s;
 
@@ -35,32 +36,32 @@
       }
     }
 
-    &.error {
+    &.ERROR {
       background-color: $error;
     }
   }
 
-  &.text {
+  &.TEXT {
     background-color: $transparent;
 
-    &.primary {
+    &.PRIMARY {
       color: $primary;
     }
 
-    &.warning {
+    &.WARNING {
       color: $warning;
     }
 
-    &.error {
+    &.ERROR {
       color: $error;
     }
   }
 
-  &.outlined {
+  &.OUTLINED {
     background-color: $transparent;
     border: 1px solid;
 
-    &.primary {
+    &.PRIMARY {
       border-color: $light-gray;
       color: $primary;
       transition: all .3s;
@@ -70,7 +71,7 @@
       }
     }
 
-    &.warning {
+    &.WARNING {
       border-color: $warning;
       color: $warning;
       transition: all .3s;
@@ -80,7 +81,7 @@
       }
     }
 
-    &.error {
+    &.ERROR {
       border-color: $error;
       color: $error;
       transition: all .3s;
@@ -91,17 +92,17 @@
     }
   }
 
-  &.small {
+  &.SMALL {
     padding: 8px 12px;
     font-size: 12px;
     font-weight: 400;
   }
 
-  &.big {
+  &.BIG {
     padding: 11px 16px;
   }
 
-  &.large {
+  &.LARGE {
     padding: 12px 28px;
   }
 

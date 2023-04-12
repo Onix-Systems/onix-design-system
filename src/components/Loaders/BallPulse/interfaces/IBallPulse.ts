@@ -1,6 +1,6 @@
-import { EBallPulseColors } from '../../../../constants/tsConstants';
+import { BallPulseColors } from '../../../../constants/general';
 
 export interface IBallPulseProps {
   className?: string,
-  color?: EBallPulseColors,
+  color?: BallPulseColors,
 }

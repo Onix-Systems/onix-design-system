@@ -1,39 +1,30 @@
 import React, { FC, memo, useMemo } from 'react';
 import { IButtonProps } from './interfaces/IButton';
-import { EColors, ESizes, EVariants } from '../../constants/tsConstants';
+import { Colors, Sizes, Variants } from '../../constants/general';
 import styles from './sass/Button.module.scss';
 import BallPulse from '../Loaders/BallPulse/BallPulse';
 
 const Button: FC<IButtonProps> = ({
   text = '',
-  aliaLabel = '',
   disabled = false,
   isLoading = false,
-  onClick,
-  onMouseEnter,
-  onMouseLeave,
-  variant = EVariants.CONTAINED,
-  color = EColors.PRIMARY,
-  size = ESizes.MEDIUM,
+  variant = Variants.Contained,
+  color = Colors.Primary,
+  size = Sizes.Medium,
   iconLeft = null,
   iconRight = null,
   className = '',
+  ...props
 }) => {
-  const loader = useMemo(() => {
-    if (isLoading) {
-      return (
-        <BallPulse
-          className={styles.loader}
-          color={variant === EVariants.CONTAINED || disabled ? undefined : color}
-        />
-      );
-    }
-    return null;
-  }, [isLoading, disabled, variant, color]);
+  const loader = useMemo(() => (
+    <BallPulse
+      className={styles.loader}
+      color={variant === Variants.Contained || disabled ? undefined : color}
+    />
+  ), [disabled, variant, color]);
 
   return (
     <button
-      aria-label={aliaLabel}
       type="button"
       className={`
       ${styles.button}
@@ -44,13 +35,11 @@ const Button: FC<IButtonProps> = ({
       ${className}
     `}
       disabled={disabled || isLoading}
-      onClick={onClick}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      {...props}
     >
       {iconLeft && <img className={styles.iconLeft} src={iconLeft} alt={text} />}
       {text && <span className={isLoading ? styles.loaderText : ''}>{text}</span>}
-      {loader}
+      {isLoading && loader}
       {iconRight && <img className={styles.iconRight} src={iconRight} alt={text} />}
     </button>
   );
