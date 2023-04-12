@@ -1,0 +1,31 @@
+@import '../../../sass/colors';
+
+.badge {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: $black;
+  background-color: $light-gray;
+  border-radius: 100px;
+  padding: 3px 8px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+
+  &.success {
+    color: $success;
+    background: $success-background;
+  }
+
+  &.error {
+    color: $error;
+    background: $error-background;
+  }
+
+  &.warning {
+    color: $warning;
+    background: $light-warning;
+  }
+}
