@@ -22,3 +22,8 @@ export enum EBadgeVariants {
   WARNING = 'warning',
   ERROR = 'error',
 }
+
+export enum EBadgeShape {
+  SQUARE = 'square',
+  ROUND = 'round',
+}
