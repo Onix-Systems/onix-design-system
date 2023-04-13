@@ -1,0 +1,33 @@
+@import "../../../sass/colors";
+
+.bellButton {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+
+  &:hover {
+    background-color: $outlined-hover;
+    border-radius: 4px;
+
+    .notificationDot {
+      border-color: $outlined-hover;
+    }
+  }
+
+  .notificationDot {
+    position: absolute;
+    top: 3px;
+    right: 1px;
+    background-color: $red;
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    border: 2px solid $white;
+  }
+
+  .activeBell {
+    filter: invert(31%) sepia(90%) saturate(3891%) hue-rotate(205deg) brightness(102%) contrast(106%);
+  }
+}
