@@ -1,8 +1,8 @@
 import React, { FC, memo, useMemo } from 'react';
 import { IButtonProps } from './interfaces/IButton';
 import { Colors, Sizes, Variants } from '../../constants/general';
-import styles from './sass/Button.module.scss';
 import BallPulse from '../Loaders/BallPulse/BallPulse';
+import styles from './sass/Button.module.scss';
 
 const Button: FC<IButtonProps> = ({
   text = '',
