@@ -10,6 +10,4 @@ export default {
 const Template: ComponentStory<typeof Bell> = (args) => <Bell {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  alt: 'Bell',
-};
+Default.args = {};

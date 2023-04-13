@@ -5,7 +5,6 @@ import styles from './sass/Bell.module.scss';
 import BellIcon from '../../assets/icons/bell.svg';
 
 const Bell: FC<IBellProps> = ({
-  alt = 'bell',
   isActive = false,
   hasNotification = false,
   className = '',
@@ -16,7 +15,7 @@ const Bell: FC<IBellProps> = ({
     type="button"
     {...props}
   >
-    <img className={isActive ? `${styles.activeBell}` : ''} src={BellIcon} alt={alt} />
+    <img className={isActive ? `${styles.activeBell}` : ''} src={BellIcon} alt="bell" />
     {hasNotification && <div className={styles.notificationDot} />}
   </button>
 );
