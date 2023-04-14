@@ -5,5 +5,4 @@ export interface IIconButtonProps extends ComponentPropsWithRef<'button'> {
   icon: string,
   size?: Sizes,
   variant?: IconButtonVariants,
-  alt?: string,
 }
