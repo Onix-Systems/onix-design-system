@@ -42,6 +42,17 @@ export default [
     ],
   },
   {
+    input: 'src/icons.ts',
+    output: [{ dir: 'dist/cjs', format: 'cjs' }],
+    plugins: [image()]
+
+  },
+  {
+    input: 'src/icons.ts',
+    output: [{ dir: 'dist/esm', format: 'esm' }],
+    plugins: [image()]
+  },
+  {
     input: 'dist/esm/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
