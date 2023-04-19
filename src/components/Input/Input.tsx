@@ -5,34 +5,55 @@ import styles from './sass/Input.module.scss';
 const Input: React.FC<IInputProps> = ({
   iconLeft,
   iconRight,
+  iconLeftClass = '',
+  iconRightClass = '',
   type,
   variant = 'default',
   className,
   disabled,
   error,
   isFocused,
-  ...rest
+  onLeftIconClick,
+  onRightIconClick,
+  ...props
 }) => (
-  <div className={`
+  <label className={`
       ${styles.wrapper}
       ${isFocused && styles.focused}
       ${styles[variant]}
       ${disabled && styles.disabled}
     `}
   >
-    {iconLeft && <img className={styles.iconLeft} src={iconLeft} alt="icon" />}
+    {iconLeft && (
+      <img
+        onClick={onLeftIconClick}
+        role="presentation"
+        className={`${styles.iconLeft} ${iconLeftClass}`}
+        src={iconLeft}
+        alt="icon"
+      />
+    )}
     <input
-      type={type}
       className={`
           ${styles.input}
           ${variant && variant !== 'default' && styles[variant]}
+          ${iconRight ? styles.paddingRight : ''}
+          ${iconLeft ? styles.paddingLeft : ''}
           ${error && styles.error}
         `}
       disabled={disabled}
-      {...rest}
+      {...props}
     />
-    {iconRight && <img className={styles.iconRight} src={iconRight} alt="icon" />}
-  </div>
+    {iconRight && (
+      <img
+        onClick={onRightIconClick}
+        role="presentation"
+        className={`${styles.iconRight} ${iconRightClass}`}
+        src={iconRight}
+        alt="icon"
+      />
+    )}
+  </label>
 );
 
 export default Input;
