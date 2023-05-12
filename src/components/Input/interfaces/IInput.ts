@@ -3,6 +3,7 @@ import { InputHTMLAttributes } from 'react';
 export type InputVariant = 'default' | 'underline';
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
+  name: string,
   iconLeft?: string,
   iconRight?: string,
   iconLeftClass?: string,

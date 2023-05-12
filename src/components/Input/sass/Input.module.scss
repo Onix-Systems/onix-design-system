@@ -23,11 +23,6 @@
     }
   }
 
-  &.focused {
-    border-color: $primary;
-    outline: 0;
-  }
-
   .iconLeft {
     @include icon;
     left: 10px;
@@ -74,6 +69,11 @@
     }
 
     &:focus {
+      border-color: $primary;
+      outline: 0;
+    }
+
+    &.focus {
       border-color: $primary;
       outline: 0;
     }

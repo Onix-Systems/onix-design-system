@@ -3,6 +3,7 @@ import { IInputProps } from './interfaces/IInput';
 import styles from './sass/Input.module.scss';
 
 const Input: React.FC<IInputProps> = ({
+  name,
   iconLeft,
   iconRight,
   iconLeftClass = '',
@@ -17,9 +18,10 @@ const Input: React.FC<IInputProps> = ({
   onRightIconClick,
   ...props
 }) => (
-  <label className={`
+  <label
+    htmlFor={name}
+    className={`
       ${styles.wrapper}
-      ${isFocused && styles.focused}
       ${styles[variant]}
       ${disabled && styles.disabled}
     `}
@@ -36,12 +38,15 @@ const Input: React.FC<IInputProps> = ({
     <input
       className={`
           ${styles.input}
-          ${variant && variant !== 'default' && styles[variant]}
+          ${styles[variant]}
           ${iconRight ? styles.paddingRight : ''}
           ${iconLeft ? styles.paddingLeft : ''}
           ${error && styles.error}
+          ${isFocused && styles.focus}
         `}
       disabled={disabled}
+      id={name}
+      name={name}
       {...props}
     />
     {iconRight && (
