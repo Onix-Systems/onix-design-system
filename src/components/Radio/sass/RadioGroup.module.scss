@@ -1,0 +1,15 @@
+.root {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+
+  &.horizontal {
+    flex-direction: row;
+  }
+
+  .item {
+    display: inline-flex;
+  }
+}
