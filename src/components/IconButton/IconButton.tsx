@@ -3,8 +3,8 @@ import styles from './sass/IconButton.module.scss';
 import { IconButtonProps } from './interfaces/IIconButton';
 
 const IconButton: React.FC<IconButtonProps> = ({
-  size = 'md',
-  color = 'gray',
+  size = 'MEDIUM',
+  color = 'GRAY',
   icon,
   disabled,
   className,

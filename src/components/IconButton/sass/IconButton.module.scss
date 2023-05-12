@@ -23,19 +23,19 @@
   background-color: $white;
   padding: 0;
 
-  &.lg {
+  &.BIG {
     height: 32px;
     min-width: 32px;
     font-size: 20px;
   }
 
-  &.sm {
+  &.SMALL {
     height: 20px;
     min-width: 20px;
     font-size: 12px;
   }
 
-  &.xs {
+  &.EXTRA_SMALL {
     height: 16px;
     min-width: 16px;
     font-size: 10px;
@@ -47,11 +47,11 @@
     }
   }
 
-  &.black {
+  &.BLACK {
     color: $dark-gray;
   }
 
-  &.primary {
+  &.PRIMARY {
     color: $white;
     background-color: $primary;
 
@@ -65,7 +65,7 @@
     }
   }
 
-  &.secondary {
+  &.SECONDARY {
     color: $primary;
     background-color: $white;
     border: 1px solid $light-gray;
@@ -82,7 +82,7 @@
     }
   }
 
-  &.danger {
+  &.DANGER {
     background: transparent;
 
     &:hover:enabled {

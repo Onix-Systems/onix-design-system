@@ -1,11 +1,9 @@
 import React, { ButtonHTMLAttributes } from 'react';
-
-export type SizeType = 'lg' | 'md' | 'sm' | 'xs' | undefined;
-export type ColorSchemeType = 'gray' | 'black' | 'primary' | 'secondary' | 'danger';
+import { IconButtonColorsExtender, IconButtonSizes } from '../../../constants/general';
 
 export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon: React.ReactNode;
-  size?: SizeType;
+  size?: IconButtonSizes;
   disabled?: boolean;
-  color?: ColorSchemeType;
+  color?: IconButtonColorsExtender;
 }
