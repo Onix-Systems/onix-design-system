@@ -28,3 +28,18 @@ export enum BallPulseColorsExtender {
 }
 
 export type BallPulseColors = Colors | BallPulseColorsExtender;
+
+export enum IconButtonSizes {
+  ExtraSmall = 'EXTRA_SMALL',
+  Small = 'SMALL',
+  Medium = 'MEDIUM',
+  BIG = 'BIG',
+}
+
+export enum IconButtonColors {
+  Gray = 'GRAY',
+  Black = 'BLACK',
+  Primary = 'PRIMARY',
+  Secondary = 'SECONDARY',
+  Danger = 'DANGER',
+}

@@ -1,0 +1,114 @@
+@import "../../../sass/colors";
+
+.button {
+  cursor: pointer;
+  display: inline-flex;
+  appearance: none;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  border-radius: 4px;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  height: 24px;
+  min-width: 24px;
+  font-size: 24px;
+  border: none;
+  color: $gray;
+  background-color: $white;
+  padding: 0;
+
+  &.BIG {
+    height: 32px;
+    min-width: 32px;
+    font-size: 20px;
+  }
+
+  &.SMALL {
+    height: 20px;
+    min-width: 20px;
+    font-size: 12px;
+  }
+
+  &.EXTRA_SMALL {
+    height: 16px;
+    min-width: 16px;
+    font-size: 10px;
+
+    svg {
+      * {
+        stroke-width: 3px;
+      }
+    }
+  }
+
+  &.BLACK {
+    color: $dark-gray;
+  }
+
+  &.PRIMARY {
+    color: $white;
+    background-color: $primary;
+
+    &:hover:enabled {
+      background-color: $primary-hover;
+    }
+
+    &:focus:enabled {
+      color: $white;
+      background-color: $primary-hover;
+    }
+  }
+
+  &.SECONDARY {
+    color: $primary;
+    background-color: $white;
+    border: 1px solid $light-gray;
+
+    &:hover:enabled {
+      background-color: $light-blue;
+      border-color: $light-blue;
+    }
+
+    &:focus:enabled {
+      background-color: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+  }
+
+  &.DANGER {
+    background: transparent;
+
+    &:hover:enabled {
+      background-color: $error-background;
+      color: $red;
+    }
+
+    &:focus:enabled {
+      color: $red;
+    }
+  }
+
+  &:hover {
+    background-color: $outlined-hover;
+  }
+
+  &:focus {
+    outline: none;
+    color: $primary;
+  }
+
+  &:disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    background-color: $light-gray;
+    cursor: not-allowed;
+    color: $light-gray-2;
+  }
+}
