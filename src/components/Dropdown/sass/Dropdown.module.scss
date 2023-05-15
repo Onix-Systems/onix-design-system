@@ -1,0 +1,19 @@
+@import "../../../sass/colors";
+
+.container {
+  width: 100%;
+
+  .label {
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .optionsList {
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid $light-gray;
+  }
+}
