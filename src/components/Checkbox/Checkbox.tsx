@@ -1,5 +1,6 @@
 import React, { FC, memo } from 'react';
 import { ICheckbox } from './interfaces/ICheckbox';
+import { TextBig } from '../Typography/Typography';
 import styles from './sass/Checkbox.module.scss';
 
 const Checkbox: FC<ICheckbox> = ({
@@ -22,7 +23,7 @@ const Checkbox: FC<ICheckbox> = ({
       />
       <span className={styles.checkmark} />
     </span>
-    {text && <span className={styles.label}>{text}</span>}
+    {text && <TextBig>{text}</TextBig>}
   </label>
 );
 
