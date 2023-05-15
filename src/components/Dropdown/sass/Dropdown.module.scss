@@ -2,6 +2,18 @@
 
 .container {
 
+  .input {
+    .iconRight {
+      filter: initial;
+    }
+
+    input {
+      &:focus {
+        border-color: $light-gray !important;
+      }
+    }
+  }
+
   .iconRight {
     right: 23px;
   }

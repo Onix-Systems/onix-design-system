@@ -53,6 +53,7 @@ const Dropdown: FC<IDropdown> = ({
         <DropdownList options={filteredOptions} onClick={handleItemClick} />
       )}
       <Input
+        className={styles.input}
         value={inputValue}
         iconRight={dropdownIcon}
         iconRightClass={styles.iconRight}
