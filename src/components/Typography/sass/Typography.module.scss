@@ -1,0 +1,42 @@
+@import "../../../sass/colors";
+
+@mixin typography {
+  color: $dark-gray;
+  font-weight: 400;
+  margin: 0;
+}
+
+.h1 {
+  @include typography;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.textLarge {
+  @include typography;
+  font-size: 16px;
+}
+
+.textBig {
+  @include typography;
+  font-size: 14px;
+}
+
+.textMedium {
+  @include typography;
+  font-size: 13px;
+}
+
+.textSmall {
+  @include typography;
+  font-size: 12px;
+}
+
+.textExtraSmall {
+  @include typography;
+  font-size: 10px;
+}
