@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import { IDropdownList } from '../interfaces/IDropdown';
+import { IDropdownList } from '../interfaces/IDropdownSelect';
 import DropdownItem from './DropdownItem';
-import styles from '../sass/DropdownList.module.scss';
+import styles from '../sass/DropdownSelectList.module.scss';
 
 const DropdownList: FC<IDropdownList> = ({ options, onClick }) => (
   <div className={styles.container}>

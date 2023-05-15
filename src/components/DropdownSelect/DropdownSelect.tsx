@@ -1,13 +1,13 @@
 import React, { FC, useMemo, useState } from 'react';
 import useOutsideClick from '../../hooks/useOutsideClick';
-import { IDropdown } from './interfaces/IDropdown';
+import { IDropdownSelect } from './interfaces/IDropdownSelect';
 import Input from '../Input/Input';
 import DropdownList from './components/DropdownList';
 import DropdownDownIcon from '../Icons/DropdownDownIcon';
 import DropdownUpIcon from '../Icons/DropdownUpIcon';
-import styles from './sass/Dropdown.module.scss';
+import styles from './sass/DropdownSelect.module.scss';
 
-const Dropdown: FC<IDropdown> = ({
+const DropdownSelect: FC<IDropdownSelect> = ({
   options,
   displayOptionsOnTop = false,
   autoComplete = 'off',
@@ -69,4 +69,4 @@ const Dropdown: FC<IDropdown> = ({
   );
 };
 
-export default Dropdown;
+export default DropdownSelect;
