@@ -6,8 +6,6 @@ export interface IDropdownOptions {
 }
 
 export interface IDropdown extends InputHTMLAttributes<HTMLInputElement> {
-  name: string
-  placeholder?: string
   options: IDropdownOptions[]
   displayOptionsOnTop: boolean
 }

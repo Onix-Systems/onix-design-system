@@ -17,4 +17,5 @@ Default.args = {
     { text: 'second', value: 'second' },
     { text: 'third', value: 'third' },
   ],
+  placeholder: 'placeholder',
 };

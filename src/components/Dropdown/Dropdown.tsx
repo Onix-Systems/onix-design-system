@@ -8,8 +8,6 @@ import DropdownUpIcon from '../Icons/DropdownUpIcon';
 import styles from './sass/Dropdown.module.scss';
 
 const Dropdown: FC<IDropdown> = ({
-  name,
-  placeholder,
   options,
   displayOptionsOnTop = false,
   autoComplete = 'off',
@@ -55,9 +53,7 @@ const Dropdown: FC<IDropdown> = ({
         <DropdownList options={filteredOptions} onClick={handleItemClick} />
       )}
       <Input
-        name={name}
         value={inputValue}
-        placeholder={placeholder}
         iconRight={dropdownIcon}
         iconRightClass={styles.iconRight}
         onFocus={handleFocus}
