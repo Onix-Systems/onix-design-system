@@ -1,0 +1,95 @@
+@import "../../../sass/colors";
+
+@mixin icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+
+  &:focus-within {
+    .iconLeft {
+      filter: invert(27%) sepia(54%) saturate(3877%) hue-rotate(205deg) brightness(103%) contrast(105%);
+    }
+
+    .iconRight {
+      filter: invert(27%) sepia(54%) saturate(3877%) hue-rotate(205deg) brightness(103%) contrast(105%);
+    }
+  }
+
+  .iconLeft {
+    @include icon;
+    left: 10px;
+  }
+
+  .iconRight {
+    @include icon;
+    right: 10px;
+  }
+
+  .input {
+    box-sizing: border-box;
+    margin: 0;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-width: 0;
+    line-height: 17px;
+    padding: 11px 16px;
+    color: $dark-gray;
+    font-size: 14px;
+    background-color: $white;
+    background-image: none;
+    transition: all .3s;
+    border: 1px solid $primary-border;
+    border-radius: 4px;
+
+    &.paddingLeft {
+      padding-left: 35px;
+    }
+
+    &.paddingRight {
+      padding-right: 35px;
+    }
+
+    &.underline {
+      border-radius: 0;
+      border-left: none;
+      border-top: none;
+      border-right: none;
+    }
+
+    &:focus {
+      border-color: $primary;
+      outline: 0;
+    }
+
+    &.focus {
+      border-color: $primary;
+      outline: 0;
+    }
+
+    &.error {
+      border-color: $red;
+    }
+
+    &::placeholder {
+      color: $gray;
+    }
+
+    &:disabled {
+      background-color: $light-gray;
+      color: $gray;
+      cursor: not-allowed;
+    }
+  }
+}
