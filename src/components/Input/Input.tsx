@@ -10,7 +10,7 @@ const Input: React.FC<IInputProps> = ({
   iconRightClass = '',
   type,
   variant = 'default',
-  className,
+  className = '',
   disabled,
   error,
   isFocused,
@@ -24,6 +24,7 @@ const Input: React.FC<IInputProps> = ({
       ${styles.wrapper}
       ${styles[variant]}
       ${disabled && styles.disabled}
+      ${className}
     `}
   >
     {iconLeft && <div className={`${styles.iconLeft} ${iconLeftClass}`}>{iconLeft}</div>}
