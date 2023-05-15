@@ -1,13 +1,19 @@
 import React, { FC, useMemo, useState } from 'react';
-import { IDropdown } from './interfaces/IDropdown';
 import useOutsideClick from '../../hooks/useOutsideClick';
-import styles from './sass/Dropdown.module.scss';
+import { IDropdown } from './interfaces/IDropdown';
+import Input from '../Input/Input';
 import DropdownList from './components/DropdownList';
+import DropdownDownIcon from '../Icons/DropdownDownIcon';
+import DropdownUpIcon from '../Icons/DropdownUpIcon';
+import styles from './sass/Dropdown.module.scss';
 
 const Dropdown: FC<IDropdown> = ({
   name,
   placeholder,
   options,
+  displayOptionsOnTop = false,
+  autoComplete = 'off',
+  ...props
 }) => {
   const [inputValue, setInputValue] = useState('');
   const [dropdownShown, setDropdownShown] = useState(false);
@@ -15,6 +21,17 @@ const Dropdown: FC<IDropdown> = ({
   const filteredOptions = useMemo(() => (
     options.filter(({ text }) => text.startsWith(inputValue))
   ), [inputValue, options]);
+
+  const optionsShowCondition = useMemo(() => (
+    dropdownShown && filteredOptions.length > 0
+  ), [filteredOptions, dropdownShown]);
+
+  const dropdownIcon = useMemo(() => {
+    if (displayOptionsOnTop) {
+      return optionsShowCondition ? <DropdownDownIcon /> : <DropdownUpIcon />;
+    }
+    return optionsShowCondition ? <DropdownUpIcon /> : <DropdownDownIcon />;
+  }, [optionsShowCondition, displayOptionsOnTop]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
@@ -34,18 +51,23 @@ const Dropdown: FC<IDropdown> = ({
 
   return (
     <div className={styles.container} ref={ref as React.Ref<HTMLDivElement>}>
-      <label htmlFor={name} className={styles.label}>
-        <input
-          autoComplete="off"
-          onChange={handleChange}
-          onFocus={handleFocus}
-          id={name}
-          name={name}
-          placeholder={placeholder}
-          value={inputValue}
-        />
-      </label>
-      {dropdownShown && <DropdownList options={filteredOptions} onClick={handleItemClick} />}
+      {optionsShowCondition && displayOptionsOnTop && (
+        <DropdownList options={filteredOptions} onClick={handleItemClick} />
+      )}
+      <Input
+        name={name}
+        value={inputValue}
+        placeholder={placeholder}
+        iconRight={dropdownIcon}
+        iconRightClass={styles.iconRight}
+        onFocus={handleFocus}
+        onChange={handleChange}
+        autoComplete={autoComplete}
+        {...props}
+      />
+      {optionsShowCondition && !displayOptionsOnTop && (
+        <DropdownList options={filteredOptions} onClick={handleItemClick} />
+      )}
     </div>
   );
 };

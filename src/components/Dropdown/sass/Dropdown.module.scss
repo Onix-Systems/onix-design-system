@@ -1,14 +1,9 @@
 @import "../../../sass/colors";
 
 .container {
-  width: 100%;
 
-  .label {
-    width: 100%;
-
-    input {
-      width: 100%;
-    }
+  .iconRight {
+    right: 23px;
   }
 
   .optionsList {

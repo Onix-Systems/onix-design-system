@@ -1,12 +1,15 @@
+import { InputHTMLAttributes } from 'react';
+
 export interface IDropdownOptions {
   text: string
   value: string
 }
 
-export interface IDropdown {
+export interface IDropdown extends InputHTMLAttributes<HTMLInputElement> {
   name: string
   placeholder?: string
   options: IDropdownOptions[]
+  displayOptionsOnTop: boolean
 }
 
 export interface IDropdownList {
