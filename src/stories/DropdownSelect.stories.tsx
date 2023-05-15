@@ -1,17 +1,17 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Dropdown from '../components/Dropdown/Dropdown';
+import DropdownSelect from '../components/DropdownSelect/DropdownSelect';
 
 export default {
-  title: 'Example/Dropdown',
-  component: Dropdown,
-} as ComponentMeta<typeof Dropdown>;
+  title: 'Example/DropdownSelect',
+  component: DropdownSelect,
+} as ComponentMeta<typeof DropdownSelect>;
 
-const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} />;
+const Template: ComponentStory<typeof DropdownSelect> = (args) => <DropdownSelect {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  name: 'dropdown',
+  name: 'DropdownSelect',
   options: [
     { text: 'first', value: 'first' },
     { text: 'second', value: 'second' },

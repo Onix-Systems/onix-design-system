@@ -5,7 +5,7 @@ export interface IDropdownOptions {
   value: string
 }
 
-export interface IDropdown extends InputHTMLAttributes<HTMLInputElement> {
+export interface IDropdownSelect extends InputHTMLAttributes<HTMLInputElement> {
   options: IDropdownOptions[]
   displayOptionsOnTop: boolean
 }
