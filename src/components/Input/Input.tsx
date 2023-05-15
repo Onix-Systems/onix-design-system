@@ -26,15 +26,7 @@ const Input: React.FC<IInputProps> = ({
       ${disabled && styles.disabled}
     `}
   >
-    {iconLeft && (
-      <img
-        onClick={onLeftIconClick}
-        role="presentation"
-        className={`${styles.iconLeft} ${iconLeftClass}`}
-        src={iconLeft}
-        alt="icon"
-      />
-    )}
+    {iconLeft && <div className={`${styles.iconLeft} ${iconLeftClass}`}>{iconLeft}</div>}
     <input
       className={`
           ${styles.input}
@@ -49,15 +41,7 @@ const Input: React.FC<IInputProps> = ({
       name={name}
       {...props}
     />
-    {iconRight && (
-      <img
-        onClick={onRightIconClick}
-        role="presentation"
-        className={`${styles.iconRight} ${iconRightClass}`}
-        src={iconRight}
-        alt="icon"
-      />
-    )}
+    {iconRight && <div className={`${styles.iconRight} ${iconRightClass}`}>{iconRight}</div>}
   </label>
 );
 

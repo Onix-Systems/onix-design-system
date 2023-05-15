@@ -1,11 +1,10 @@
-import { InputHTMLAttributes } from 'react';
+import { ReactNode, InputHTMLAttributes } from 'react';
 
 export type InputVariant = 'default' | 'underline';
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  name: string,
-  iconLeft?: string,
-  iconRight?: string,
+  iconLeft?: ReactNode,
+  iconRight?: ReactNode,
   iconLeftClass?: string,
   iconRightClass?: string,
   className?: string,
