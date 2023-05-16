@@ -1,7 +1,7 @@
 export enum Sizes {
   Small = 'SMALL',
   Medium = 'MEDIUM',
-  BIG = 'BIG',
+  Big = 'BIG',
 }
 
 export enum Variants {

@@ -1,0 +1,38 @@
+@import "../../../sass/colors";
+
+.container {
+  border-radius: 4px;
+  box-shadow: 0 4px 8px $box-shadow, 0 8px 24px $box-shadow-2;
+  padding: 26px 24px 24px;
+
+  .headingContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .headingLeft {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .closeButton {
+      svg {
+        width: 16px;
+        height: 16px;
+        filter: invert(59%) sepia(11%) saturate(443%) hue-rotate(182deg) brightness(94%) contrast(94%);
+      }
+    }
+  }
+
+  .textContainer {
+    margin: 0 0 24px 40px;
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+}
