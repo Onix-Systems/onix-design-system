@@ -40,6 +40,8 @@ import BriefcaseIcon from './BriefcaseIcon';
 import PencilIcon from './PencilIcon';
 import CpuIcon from './CpuIcon';
 import TrashCanIcon from './TrashCanIcon';
+import ArrowRightIcon from './ArrowRightIcon';
+import ArrowLeftIcon from './ArrowLeftIcon';
 
 export {
   CloseIcon,
@@ -84,4 +86,6 @@ export {
   PencilIcon,
   CpuIcon,
   TrashCanIcon,
+  ArrowRightIcon,
+  ArrowLeftIcon,
 };
