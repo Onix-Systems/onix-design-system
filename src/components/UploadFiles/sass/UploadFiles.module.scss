@@ -1,0 +1,57 @@
+@import '../../../sass/colors';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    display: none;
+  }
+
+  .file {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      display: inline-flex;
+      font-size: 22px;
+      color: $lightGray;
+    }
+
+    .fileName {
+      font-size: 12px;
+      color: $primary;
+      margin: 0 16px 0 6px;
+      max-width: 215px;
+      line-break: anywhere;
+    }
+  }
+
+  .uploadBtn {
+    position: relative;
+    cursor: pointer;
+    padding: 8px 12px 8px 38px;
+    width: max-content;
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+    background-color: $white;
+    color: $primary;
+    font-size: 12px;
+    line-height: 15px;
+    transition: .3s;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      left: 12px;
+      background: url("../../../assets/icons/i-upload-blue.svg") no-repeat center;
+    }
+
+    &:hover {
+      background-color: #E5F0FF;
+      border: 1px solid #E5F0FF;
+    }
+  }
+}
