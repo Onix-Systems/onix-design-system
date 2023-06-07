@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+
+  .icon {
+    display: none;
+  }
+
+  &:hover {
+    color: #8891a3;
+
+    .icon {
+      display: inline-flex;
+    }
+  }
+}
