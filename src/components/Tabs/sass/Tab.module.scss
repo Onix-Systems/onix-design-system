@@ -1,0 +1,22 @@
+@import "../../../sass/colors";
+
+.root {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 30px;
+  display: inline-flex;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+
+  &.active {
+    border-bottom: 2px solid $primary;
+  }
+
+  &.disabled {
+    cursor: default;
+    color: $gray;
+  }
+}
