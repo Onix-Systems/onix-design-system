@@ -11,7 +11,7 @@ const Template: ComponentStory<typeof DropdownCheckbox> = (args) => <DropdownChe
 
 export const Default = Template.bind({});
 Default.args = {
-  buttonText: 'Dropdown',
+  buttonText: 'Dropdowns',
   options: [
     { text: 'first', value: 'first' },
     { text: 'second', value: 'second' },

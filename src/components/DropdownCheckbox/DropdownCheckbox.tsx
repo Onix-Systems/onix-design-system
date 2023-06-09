@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import ButtonDropdown from '../Dropdown/ButtonDropdown';
+import ButtonDropdown from '../Dropdowns/ButtonDropdown';
 import { Checkbox } from '../index';
 import { IDropdownCheckboxProps } from './interfaces/IDropdownCheckbox';
 import CheckboxGroup from '../CheckboxGroup/CheckboxGroup';
