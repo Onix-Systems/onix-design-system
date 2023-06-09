@@ -1,0 +1,35 @@
+@import "../../../sass/colors";
+
+.header {
+  background-color: $white;
+  width: 100%;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px;
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .bell {
+        margin: 0 32px;
+      }
+
+      .name {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        margin-left: 15px;
+      }
+    }
+  }
+}
