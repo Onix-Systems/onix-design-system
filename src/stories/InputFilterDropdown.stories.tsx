@@ -11,7 +11,11 @@ const Template: ComponentStory<typeof InputFilterDropdown> = (args) => <InputFil
 
 export const Default = Template.bind({});
 Default.args = {
-  filters: [{ text: 'one', checked: true }, { text: 'two', checked: false }, { text: 'three', checked: false }],
+  filters: [
+    { text: 'one', checked: true },
+    { text: 'two', checked: false },
+    { text: 'three', checked: false },
+  ],
   heading: 'heading',
   buttonText: 'button text',
 };

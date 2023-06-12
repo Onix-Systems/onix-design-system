@@ -44,7 +44,7 @@ const InputFilterDropdown: FC<IInputFilterDropdownProps> = ({
 
   const setAllItemsToValue = (value: boolean) => {
     setCurrentFilters((prevState) => prevState.map((filter) => (
-      filtersToDisplay.includes(filter) ? { text: filter.text, checked: value } : filter
+      filtersToDisplay.includes(filter) ? { ...filter, checked: value } : filter
     )));
   };
 
@@ -90,8 +90,14 @@ const InputFilterDropdown: FC<IInputFilterDropdownProps> = ({
             )}
           </div>
           <CheckboxGroup>
-            {filtersToDisplay.map(({ text, checked }) => (
-              <Checkbox key={text} checked={checked} text={text} onChange={() => handleFilterClick(text)} />
+            {filtersToDisplay.map(({ text, checked, image }) => (
+              <Checkbox
+                key={text}
+                checked={checked}
+                text={text}
+                image={image}
+                onChange={() => handleFilterClick(text)}
+              />
             ))}
           </CheckboxGroup>
         </div>

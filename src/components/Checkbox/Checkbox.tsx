@@ -9,6 +9,8 @@ const Checkbox: FC<ICheckbox> = ({
   checked,
   disabled = false,
   text = '',
+  image = null,
+  imageStyles = '',
   ...props
 }) => (
   <label htmlFor={id} className={`${styles.labelContainer} ${disabled ? styles.disabled : ''} ${className}`}>
@@ -23,6 +25,7 @@ const Checkbox: FC<ICheckbox> = ({
       />
       <span className={styles.checkmark} />
     </span>
+    {image && <img src={image} alt={text} className={`${styles.image} ${imageStyles}`} />}
     {text && <TextBig>{text}</TextBig>}
   </label>
 );
