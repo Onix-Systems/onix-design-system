@@ -11,7 +11,7 @@ const DropdownSelect: FC<IDropdownSelectProps> = ({
   const [inputValue, setInputValue] = useState('');
 
   const filteredOptions = useMemo(() => (
-    options.filter(({ text }) => text.startsWith(inputValue))
+    options.filter(({ text }) => text.toLowerCase().startsWith(inputValue.toLowerCase()))
   ), [inputValue, options]);
 
   const handleChangeInputValue = (value: string) => setInputValue(value);

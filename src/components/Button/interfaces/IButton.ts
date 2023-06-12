@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef } from 'react';
+import { ComponentPropsWithRef, ReactNode } from 'react';
 import { Colors, Variants, ButtonSizes } from '../../../constants/general';
 
 export interface IButtonProps extends ComponentPropsWithRef<'button'> {
@@ -7,6 +7,6 @@ export interface IButtonProps extends ComponentPropsWithRef<'button'> {
   variant?: Variants,
   color?: Colors,
   size?: ButtonSizes,
-  iconLeft?: string,
-  iconRight?: string,
+  iconLeft?: ReactNode,
+  iconRight?: ReactNode,
 }

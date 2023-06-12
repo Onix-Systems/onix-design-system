@@ -37,10 +37,10 @@ const Button: FC<IButtonProps> = ({
       disabled={disabled || isLoading}
       {...props}
     >
-      {iconLeft && <img className={styles.iconLeft} src={iconLeft} alt={text} />}
+      {iconLeft}
       {text && <span className={isLoading ? styles.loaderText : ''}>{text}</span>}
       {isLoading && loader}
-      {iconRight && <img className={styles.iconRight} src={iconRight} alt={text} />}
+      {iconRight}
     </button>
   );
 };
