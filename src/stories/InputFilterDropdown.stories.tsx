@@ -15,6 +15,7 @@ Default.args = {
     { text: 'one', checked: true },
     { text: 'two', checked: false },
     { text: 'three', checked: false },
+    { text: 'threeee', checked: false },
   ],
   heading: 'heading',
   buttonText: 'button text',

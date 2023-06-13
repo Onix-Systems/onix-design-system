@@ -6,4 +6,5 @@ export interface IButtonDropdownProps extends IButtonProps {
   buttonStyles?: string
   buttonText?: string
   containerStyles?: string
+  onOutsideClick?: () => void
 }
