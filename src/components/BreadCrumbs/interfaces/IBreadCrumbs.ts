@@ -11,5 +11,4 @@ export interface BreadcrumbItemProps {
   name: string,
   isLast: boolean,
   separator: string | React.ReactNode,
-  isCopyable: boolean,
 }

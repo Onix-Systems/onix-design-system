@@ -13,7 +13,7 @@ const BreadCrumbs: React.FC<BreadCrumbsProps> = ({
     <ol className={styles.list}>
       {breadcrumbItems.map((item, index, array) => (
         array.length - 1 === index && lastIsCopyable ? (
-          <ClipboardCopy copyText={`${window.location.origin}${item.url}`}>
+          <ClipboardCopy key={item.name} copyText={`${window.location.origin}${item.url}`}>
             <BreadCrumbsItem
               key={item.name}
               isLast={array.length - 1 === index}

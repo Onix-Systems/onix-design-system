@@ -7,8 +7,8 @@ import styles from './sass/ClipboardCopy.module.scss';
 
 const ClipboardCopy: FC<ClipboardCopyProps> = ({
   icon = <AttachmentIcon />,
-  children,
   className = '',
+  children,
   copyText,
 }) => {
   const [value, copy, setCopiedText] = useCopyToClipboard();
