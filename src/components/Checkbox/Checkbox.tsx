@@ -8,7 +8,7 @@ const Checkbox: FC<ICheckbox> = ({
   className = '',
   checked,
   disabled = false,
-  text = '',
+  text,
   ...props
 }) => (
   <label htmlFor={id} className={`${styles.labelContainer} ${disabled ? styles.disabled : ''} ${className}`}>
