@@ -4,10 +4,10 @@ import { TextBig } from '../Typography/Typography';
 import styles from './sass/Checkbox.module.scss';
 
 const Checkbox: FC<ICheckbox> = ({
-  id,
   className = '',
-  checked,
   disabled = false,
+  id,
+  checked,
   text,
   ...props
 }) => (
