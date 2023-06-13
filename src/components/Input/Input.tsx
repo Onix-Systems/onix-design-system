@@ -3,14 +3,14 @@ import { IInputProps } from './interfaces/IInput';
 import styles from './sass/Input.module.scss';
 
 const Input: React.FC<IInputProps> = ({
+  iconLeftClass = '',
+  iconRightClass = '',
+  variant = 'default',
+  className = '',
   name,
   iconLeft,
   iconRight,
-  iconLeftClass = '',
-  iconRightClass = '',
   type,
-  variant = 'default',
-  className = '',
   disabled,
   error,
   isFocused,

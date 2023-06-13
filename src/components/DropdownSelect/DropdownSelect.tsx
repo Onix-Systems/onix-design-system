@@ -1,8 +1,8 @@
 import React, { FC, useMemo, useState } from 'react';
-import { IDropdownSelectProps } from './interfaces/IDropdownSelect';
 import InputDropdown from '../Dropdowns/InputDropdown';
 import { TextBig } from '../Typography/Typography';
 import styles from './sass/DropdownSelect.module.scss';
+import { IDropdownSelectProps } from './interfaces/IDropdownSelect';
 
 const DropdownSelect: FC<IDropdownSelectProps> = ({
   options,

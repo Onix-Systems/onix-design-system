@@ -3,14 +3,14 @@ import React, {
 } from 'react';
 import Button from '../Button/Button';
 import { TextBigBold } from '../Typography/Typography';
-import { IFilter, IInputFilterDropdownProps } from './interfaces/IInputFilterDropdown';
-import { Variants } from '../../constants/general';
 import Checkbox from '../Checkbox/Checkbox';
 import CheckboxGroup from '../CheckboxGroup/CheckboxGroup';
 import ButtonDropdown from '../Dropdowns/ButtonDropdown';
 import Input from '../Input/Input';
+import { Variants } from '../../constants/general';
 import { DropdownDownIcon, DropdownUpIcon, SearchIcon } from '../Icons';
 import styles from './sass/InputFilterDropdown.module.scss';
+import { IFilter, IInputFilterDropdownProps } from './interfaces/IInputFilterDropdown';
 
 const InputFilterDropdown: FC<IInputFilterDropdownProps> = ({
   buttonText,
@@ -56,7 +56,7 @@ const InputFilterDropdown: FC<IInputFilterDropdownProps> = ({
     <div className={styles.container}>
       <ButtonDropdown
         variant={Variants.Outlined}
-        text={buttonText}
+        buttonText={buttonText}
         className={dropdownShown ? styles.dropdownButtonActive : styles.dropdownButton}
         iconRight={dropdownShown ? <DropdownDownIcon /> : <DropdownUpIcon />}
         onClick={handleDropdownButtonClick}
@@ -77,15 +77,17 @@ const InputFilterDropdown: FC<IInputFilterDropdownProps> = ({
                 <Button
                   onClick={() => setAllItemsToValue(false)}
                   variant={Variants.Text}
-                  text="clear"
                   className={styles.actionButton}
-                />
+                >
+                  clear
+                </Button>
                 <Button
                   onClick={() => setAllItemsToValue(true)}
                   variant={Variants.Text}
                   className={styles.actionButton}
-                  text="select all"
-                />
+                >
+                  select all
+                </Button>
               </div>
             )}
           </div>

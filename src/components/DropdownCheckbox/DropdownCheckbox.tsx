@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import ButtonDropdown from '../Dropdowns/ButtonDropdown';
-import { Checkbox } from '../index';
-import { IDropdownCheckboxProps } from './interfaces/IDropdownCheckbox';
+import Checkbox from '../Checkbox/Checkbox';
 import CheckboxGroup from '../CheckboxGroup/CheckboxGroup';
 import { Colors, Sizes, Variants } from '../../constants/general';
 import styles from './sass/DropdownCheckbox.module.scss';
+import { IDropdownCheckboxProps } from './interfaces/IDropdownCheckbox';
 
 const DropdownCheckbox: FC<IDropdownCheckboxProps> = ({
   options,
