@@ -1,0 +1,31 @@
+$gray: #8891A3;
+$primary-text: #363A42;
+
+.item {
+  display: inline-flex;
+  align-items: center;
+
+  .link {
+    transition: all 0.15s ease-out 0s;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: $gray;
+    font-size: 12px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .name {
+    color: $primary-text;
+    font-weight: 600;
+  }
+
+  .separator {
+    margin: 0 8px;
+    color: $gray;
+    font-size: 12px;
+  }
+}
