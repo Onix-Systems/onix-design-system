@@ -1,16 +1,16 @@
 import React from 'react';
-import { IInputProps } from './interfaces/IInput';
 import styles from './sass/Input.module.scss';
+import { IInputProps } from './interfaces/IInput';
 
 const Input: React.FC<IInputProps> = ({
+  iconLeftClass = '',
+  iconRightClass = '',
+  className = '',
+  variant = 'default',
   name,
   iconLeft,
   iconRight,
-  iconLeftClass = '',
-  iconRightClass = '',
   type,
-  variant = 'default',
-  className = '',
   disabled,
   error,
   isFocused,

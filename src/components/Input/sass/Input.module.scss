@@ -15,11 +15,11 @@
 
   &:focus-within {
     .iconLeft {
-      filter: invert(27%) sepia(54%) saturate(3877%) hue-rotate(205deg) brightness(103%) contrast(105%);
+      color: $primary!important;
     }
 
     .iconRight {
-      filter: invert(27%) sepia(54%) saturate(3877%) hue-rotate(205deg) brightness(103%) contrast(105%);
+      color: $primary!important;
     }
   }
 
