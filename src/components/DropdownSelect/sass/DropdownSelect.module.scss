@@ -10,6 +10,7 @@
     input {
       &:focus {
         border-color: $light-gray !important;
+        color: $primary;
       }
     }
   }

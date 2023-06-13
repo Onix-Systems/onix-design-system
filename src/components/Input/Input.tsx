@@ -13,7 +13,6 @@ const Input: React.FC<IInputProps> = ({
   type,
   disabled,
   error,
-  isFocused,
   onLeftIconClick,
   onRightIconClick,
   ...props
@@ -35,7 +34,6 @@ const Input: React.FC<IInputProps> = ({
           ${iconRight ? styles.paddingRight : ''}
           ${iconLeft ? styles.paddingLeft : ''}
           ${error && styles.error}
-          ${isFocused && styles.focus}
         `}
       disabled={disabled}
       id={name}
