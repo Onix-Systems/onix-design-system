@@ -1,10 +1,7 @@
 import React, { FC } from 'react';
+import { IIconsProps } from './interfaces/IIcons';
 
-interface IDropdownDownIcon {
-  fill?: string,
-}
-
-const DropdownDownIcon: FC<IDropdownDownIcon> = ({ fill = 'currentColor' }) => (
+const DropdownDownIcon: FC<IIconsProps> = ({ fill = 'currentColor' }) => (
   <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d={'M0.247736 1.48938L2.41193 3.74524C2.73782 4.08492 3.26424 4.08492 3.59013 3.74524L5.75432'

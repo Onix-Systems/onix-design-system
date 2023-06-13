@@ -3,15 +3,9 @@
 .container {
   position: relative;
 
-  .input {
-    .iconRight {
-      filter: initial;
-    }
-
-    input {
-      &:focus {
-        border-color: $light-gray !important;
-      }
+  input {
+    &:focus {
+      border-color: $light-gray !important;
     }
   }
 

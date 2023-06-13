@@ -28,7 +28,6 @@ const InputDropdown: FC<IDropdownSelect> = ({
   return (
     <div className={styles.container} ref={ref as React.Ref<HTMLDivElement>}>
       <Input
-        className={styles.input}
         iconRight={dropdownShown ? <DropdownDownIcon /> : <DropdownUpIcon />}
         iconRightClass={styles.iconRight}
         onFocus={handleFocus}
