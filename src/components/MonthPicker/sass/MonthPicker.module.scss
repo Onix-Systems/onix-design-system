@@ -1,0 +1,86 @@
+@import "../../../sass/colors";
+
+.container {
+  width: 170px;
+  background-color: $white;
+  box-shadow: 0 4px 22px $shadow;
+
+  .year {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+    border-bottom: 1px solid $light-gray;
+
+    .navBtnPrev, .navBtnNext {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      transition: .3s;
+      cursor: pointer;
+
+      &[aria-disabled="true"] {
+        pointer-events: none;
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 24px;
+        height: 24px;
+
+        background: {
+          repeat: no-repeat;
+          position: center;
+        };
+      }
+
+      &:hover {
+        background-color: $outlined-hover;
+      }
+    }
+
+    .selectedYear {
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 16px;
+      color: #000000;
+    }
+  }
+
+  .months {
+    display: flex;
+    flex-wrap: wrap;
+
+    .month {
+      width: 50%;
+      text-align: center;
+      font-size: 13px;
+      line-height: 16px;
+      padding: 8px;
+      cursor: pointer;
+      transition: .3s;
+      border-bottom: 1px solid $light-gray;
+
+
+      &.selected {
+        color: $white;
+        background-color: $primary;
+
+        &:hover {
+          color: $dark-gray;
+        }
+      }
+
+      &:nth-child(even) {
+        border-left: 1px solid $light-gray;
+      }
+
+      &:hover {
+        background-color: $light-blue;
+      }
+    }
+  }
+}
