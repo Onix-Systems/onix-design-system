@@ -64,10 +64,8 @@
       transition: .3s;
       border-bottom: 1px solid $light-gray;
 
-
       &.selected {
-        color: $white;
-        background-color: $primary;
+        color: $primary;
 
         &:hover {
           color: $dark-gray;

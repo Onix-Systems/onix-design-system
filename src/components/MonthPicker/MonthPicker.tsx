@@ -8,7 +8,10 @@ import styles from './sass/MonthPicker.module.scss';
 import { IMonthPickerProps } from './interfaces/IMonthPicker';
 
 const MonthPicker: FC<IMonthPickerProps> = ({
-  onChange, monthInt = DEFAULT_MONTH_INT, className = '', yearRange = DEFAULT_YEAR_RANGE,
+  onChange,
+  monthInt = DEFAULT_MONTH_INT,
+  yearRange = DEFAULT_YEAR_RANGE,
+  className = '',
 }) => {
   const { minYear, maxYear } = yearRange;
   const { month, year } = parseMonthIntToObj(monthInt);

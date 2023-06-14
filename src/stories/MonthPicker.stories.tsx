@@ -12,4 +12,9 @@ const Template: ComponentStory<typeof MonthPicker> = (args) => <MonthPicker {...
 export const Default = Template.bind({});
 Default.args = {
   onChange: () => {},
+  yearRange: {
+    minYear: 2020,
+    maxYear: 2025,
+  },
+  monthInt: 202310,
 };
