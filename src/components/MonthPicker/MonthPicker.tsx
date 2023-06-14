@@ -35,7 +35,6 @@ const MonthPicker: FC<IMonthPickerProps> = ({
         <IconButton
           tabIndex={-1}
           onClick={() => setYear(currentYear + 1)}
-          onKeyDown={() => {}}
           aria-label="nextYear"
           aria-disabled={currentYear >= maxYear}
           icon={<ArrowRightIcon />}
