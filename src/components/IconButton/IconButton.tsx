@@ -1,7 +1,7 @@
 import React from 'react';
+import { IconButtonColors, IconButtonSizes } from '../../constants/general';
 import styles from './sass/IconButton.module.scss';
 import { IconButtonProps } from './interfaces/IIconButton';
-import { IconButtonColors, IconButtonSizes } from '../../constants/general';
 
 const IconButton: React.FC<IconButtonProps> = ({
   size = IconButtonSizes.Medium,
