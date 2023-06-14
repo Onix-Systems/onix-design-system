@@ -1,19 +1,18 @@
 import React from 'react';
-import { IInputProps } from './interfaces/IInput';
 import styles from './sass/Input.module.scss';
+import { IInputProps } from './interfaces/IInput';
 
 const Input: React.FC<IInputProps> = ({
+  iconLeftClass = '',
+  iconRightClass = '',
+  className = '',
+  variant = 'default',
   name,
   iconLeft,
   iconRight,
-  iconLeftClass = '',
-  iconRightClass = '',
   type,
-  variant = 'default',
-  className,
   disabled,
   error,
-  isFocused,
   onLeftIconClick,
   onRightIconClick,
   ...props
@@ -24,6 +23,7 @@ const Input: React.FC<IInputProps> = ({
       ${styles.wrapper}
       ${styles[variant]}
       ${disabled && styles.disabled}
+      ${className}
     `}
   >
     {iconLeft && <div className={`${styles.iconLeft} ${iconLeftClass}`}>{iconLeft}</div>}
@@ -34,7 +34,6 @@ const Input: React.FC<IInputProps> = ({
           ${iconRight ? styles.paddingRight : ''}
           ${iconLeft ? styles.paddingLeft : ''}
           ${error && styles.error}
-          ${isFocused && styles.focus}
         `}
       disabled={disabled}
       id={name}

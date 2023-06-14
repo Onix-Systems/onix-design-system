@@ -1,0 +1,27 @@
+@import "../../../sass/colors";
+
+.container {
+
+  .input {
+    .iconRight {
+      color: $dark-gray;
+    }
+
+    input {
+      &:focus {
+        border-color: $light-gray !important;
+        color: $primary;
+      }
+    }
+  }
+
+  .iconRight {
+    right: 23px;
+  }
+
+  .optionsList {
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid $light-gray;
+  }
+}

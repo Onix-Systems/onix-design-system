@@ -10,7 +10,6 @@ export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string,
   disabled?: boolean,
   error?: boolean,
-  isFocused?: boolean,
   variant?: InputVariant,
   onLeftIconClick?: () => void,
   onRightIconClick?: () => void,
