@@ -20,7 +20,6 @@ const MonthPicker: FC<IMonthPickerProps> = ({
         <IconButton
           tabIndex={-1}
           onClick={() => setYear(currentYear - 1)}
-          onKeyDown={() => {}}
           aria-label="prevYear"
           aria-disabled={currentYear <= minYear}
           icon={<ArrowLeftIcon />}
