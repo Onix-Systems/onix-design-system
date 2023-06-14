@@ -1,22 +1,21 @@
-import { InputHTMLAttributes } from 'react';
+import { IInputProps } from '../../Input/interfaces/IInput';
 
 export interface IDropdownOptions {
   text: string
   value: string
 }
 
-export interface IDropdownSelect extends InputHTMLAttributes<HTMLInputElement> {
+export interface IDropdownSelectProps extends IInputProps {
   options: IDropdownOptions[]
-  displayOptionsOnTop: boolean
 }
 
-export interface IDropdownList {
+export interface IDropdownListProps {
   options: IDropdownOptions[]
-  onClick: (text: string) => void
+  onClick: (text: string) => void,
 }
 
-export interface IDropdownItem {
+export interface IDropdownItemProps {
+  className?: string
   name: string
-  customClass?: string
-  onClick?: () => void
+  onClick: () => void
 }

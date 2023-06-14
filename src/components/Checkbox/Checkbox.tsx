@@ -5,10 +5,12 @@ import styles from './sass/Checkbox.module.scss';
 
 const Checkbox: FC<ICheckbox> = ({
   className = '',
+  text = '',
+  imageStyles = '',
   disabled = false,
+  image = null,
   id,
   checked,
-  text,
   ...props
 }) => (
   <label htmlFor={id} className={`${styles.labelContainer} ${disabled ? styles.disabled : ''} ${className}`}>
@@ -23,6 +25,7 @@ const Checkbox: FC<ICheckbox> = ({
       />
       <span className={styles.checkmark} />
     </span>
+    {image && <img src={image} alt={text} className={`${styles.image} ${imageStyles}`} />}
     {text && <TextBig>{text}</TextBig>}
   </label>
 );

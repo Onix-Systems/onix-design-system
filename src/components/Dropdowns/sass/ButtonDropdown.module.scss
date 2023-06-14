@@ -1,0 +1,10 @@
+.container {
+  position: relative;
+  width: fit-content;
+
+  .dropdownContainer {
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+  }
+}

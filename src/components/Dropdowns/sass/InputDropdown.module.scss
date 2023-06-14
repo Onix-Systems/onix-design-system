@@ -1,0 +1,28 @@
+@import "../../../sass/colors";
+
+.container {
+  position: relative;
+
+  input {
+    &:focus {
+      border-color: $light-gray !important;
+    }
+  }
+
+  .iconRight {
+    right: 23px;
+  }
+
+  .optionsList {
+    position: absolute;
+    margin-top: 6px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid $light-gray;
+    width: 100%;
+
+    &:empty {
+      display: none;
+    }
+  }
+}

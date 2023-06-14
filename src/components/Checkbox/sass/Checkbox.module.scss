@@ -12,6 +12,7 @@
   cursor: pointer;
 
   .checkbox {
+    display: flex;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -78,6 +79,13 @@
         content: "";
       }
     }
+  }
+
+  .image {
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    margin-left: 12px;
   }
 
   p {
