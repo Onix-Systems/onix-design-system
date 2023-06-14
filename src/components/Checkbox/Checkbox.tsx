@@ -4,13 +4,13 @@ import { TextBig } from '../Typography/Typography';
 import styles from './sass/Checkbox.module.scss';
 
 const Checkbox: FC<ICheckbox> = ({
-  id,
   className = '',
-  checked,
-  disabled = false,
   text = '',
-  image = null,
   imageStyles = '',
+  disabled = false,
+  image = null,
+  id,
+  checked,
   ...props
 }) => (
   <label htmlFor={id} className={`${styles.labelContainer} ${disabled ? styles.disabled : ''} ${className}`}>
