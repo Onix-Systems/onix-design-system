@@ -1,15 +1,27 @@
 @import "../../../sass/colors";
 
 .container {
-  border-radius: 4px;
-  border: 1px solid $border-gray;
 
-  .dropdownItem {
-    padding: 6px 16px;
+  .input {
+    .iconRight {
+      color: $dark-gray;
+    }
 
-    &:hover {
-      background-color: $lightest-blue;
+    input {
+      &:focus {
+        border-color: $light-gray !important;
+        color: $primary;
+      }
     }
   }
 
+  .iconRight {
+    right: 23px;
+  }
+
+  .optionsList {
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid $light-gray;
+  }
 }
