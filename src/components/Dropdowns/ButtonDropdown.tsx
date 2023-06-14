@@ -5,7 +5,13 @@ import styles from './sass/ButtonDropdown.module.scss';
 import { IButtonDropdownProps } from './interfaces/IButtonDropdown';
 
 const ButtonDropdown: FC<IButtonDropdownProps> = ({
-  children, buttonStyles = '', buttonText, containerStyles = '', onClick, onOutsideClick, ...props
+  buttonStyles = '',
+  containerStyles = '',
+  buttonText,
+  children,
+  onClick,
+  onOutsideClick,
+  ...props
 }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
