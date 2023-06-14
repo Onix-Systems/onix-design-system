@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+
+  button:first-child {
+    margin-right: 4px;
+  }
+
+  button:last-child {
+    margin-left: 4px;
+  }
+}
