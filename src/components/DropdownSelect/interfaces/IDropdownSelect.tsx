@@ -7,5 +7,15 @@ export interface IDropdownOptions {
 
 export interface IDropdownSelectProps extends IInputProps {
   options: IDropdownOptions[]
-  displayOptionsOnTop: boolean
+}
+
+export interface IDropdownListProps {
+  options: IDropdownOptions[]
+  onClick: (text: string) => void,
+}
+
+export interface IDropdownItemProps {
+  className?: string
+  name: string
+  onClick: () => void
 }

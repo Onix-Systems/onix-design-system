@@ -1,17 +1,10 @@
 import React, { FC, useMemo, useState } from 'react';
-import useOutsideClick from '../../hooks/useOutsideClick';
-import { IDropdownSelect } from './interfaces/IDropdownSelect';
-import Input from '../Input/Input';
-import DropdownList from './components/DropdownList';
-import DropdownDownIcon from '../Icons/DropdownDownIcon';
-import DropdownUpIcon from '../Icons/DropdownUpIcon';
 import InputDropdown from '../Dropdowns/InputDropdown';
 import { TextBig } from '../Typography/Typography';
 import styles from './sass/DropdownSelect.module.scss';
-import { IDropdownSelect } from './interfaces/IDropdownSelect';
+import { IDropdownSelectProps } from './interfaces/IDropdownSelect';
 
-const DropdownSelect: FC<IDropdownSelect> = ({
-  displayOptionsOnTop = false,
+const DropdownSelect: FC<IDropdownSelectProps> = ({
   autoComplete = 'off',
   options,
   ...props
@@ -29,6 +22,7 @@ const DropdownSelect: FC<IDropdownSelect> = ({
       dropdownCustomClass={styles.container}
       value={inputValue}
       onInputChange={handleChangeInputValue}
+      autoComplete={autoComplete}
       {...props}
     >
       {filteredOptions.map(({
