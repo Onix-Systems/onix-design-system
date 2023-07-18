@@ -1,0 +1,55 @@
+@import "../../../sass/colors";
+
+.container {
+
+  .dropdownButton {
+    color: $dark-gray!important;
+
+    &Active {
+      color: $dark-gray!important;
+      background: #F2F8FF;
+
+      svg {
+        color: $primary;
+        margin-left: 8px;
+      }
+    }
+
+    svg {
+      margin-left: 8px;
+    }
+  }
+
+  .dropdownContainer {
+    border-radius: 4px;
+    box-shadow: 0 4px 22px $shadow;
+    max-width: 320px;
+    margin-top: 8px;
+    padding: 16px 16px 8px;
+
+    .input {
+      color: $gray;
+      margin-bottom: 16px;
+    }
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    .buttonContainer {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+
+      .actionButton {
+        color: $primary;
+        font-weight: 400;
+        font-size: 14px;
+        padding: 0;
+        margin-left: 24px;
+      }
+    }
+  }
+}

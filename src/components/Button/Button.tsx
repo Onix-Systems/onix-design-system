@@ -5,7 +5,6 @@ import BallPulse from '../Loaders/BallPulse/BallPulse';
 import styles from './sass/Button.module.scss';
 
 const Button: FC<IButtonProps> = ({
-  text = '',
   disabled = false,
   isLoading = false,
   variant = Variants.Contained,
@@ -14,6 +13,7 @@ const Button: FC<IButtonProps> = ({
   iconLeft = null,
   iconRight = null,
   className = '',
+  children,
   ...props
 }) => {
   const loader = useMemo(() => (
@@ -37,10 +37,10 @@ const Button: FC<IButtonProps> = ({
       disabled={disabled || isLoading}
       {...props}
     >
-      {iconLeft && <img className={styles.iconLeft} src={iconLeft} alt={text} />}
-      {text && <span className={isLoading ? styles.loaderText : ''}>{text}</span>}
+      {iconLeft}
+      {children && <span className={isLoading ? styles.loaderText : ''}>{children}</span>}
       {isLoading && loader}
-      {iconRight && <img className={styles.iconRight} src={iconRight} alt={text} />}
+      {iconRight}
     </button>
   );
 };

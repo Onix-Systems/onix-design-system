@@ -1,71 +1,44 @@
 import React, { FC, useMemo, useState } from 'react';
-import useOutsideClick from '../../hooks/useOutsideClick';
-import Input from '../Input/Input';
-import DropdownList from './components/DropdownList';
-import DropdownDownIcon from '../Icons/DropdownDownIcon';
-import DropdownUpIcon from '../Icons/DropdownUpIcon';
+import InputDropdown from '../Dropdowns/InputDropdown';
+import { TextBig } from '../Typography/Typography';
 import styles from './sass/DropdownSelect.module.scss';
-import { IDropdownSelect } from './interfaces/IDropdownSelect';
+import { IDropdownSelectProps } from './interfaces/IDropdownSelect';
 
-const DropdownSelect: FC<IDropdownSelect> = ({
-  displayOptionsOnTop = false,
+const DropdownSelect: FC<IDropdownSelectProps> = ({
   autoComplete = 'off',
   options,
   ...props
 }) => {
   const [inputValue, setInputValue] = useState('');
-  const [dropdownShown, setDropdownShown] = useState(false);
 
   const filteredOptions = useMemo(() => (
-    options.filter(({ text }) => text.startsWith(inputValue))
+    options.filter(({ text }) => text.toLowerCase().startsWith(inputValue.toLowerCase()))
   ), [inputValue, options]);
 
-  const optionsShowCondition = useMemo(() => (
-    dropdownShown && filteredOptions.length > 0
-  ), [filteredOptions, dropdownShown]);
-
-  const dropdownIcon = useMemo(() => {
-    if (displayOptionsOnTop) {
-      return optionsShowCondition ? <DropdownDownIcon /> : <DropdownUpIcon />;
-    }
-    return optionsShowCondition ? <DropdownUpIcon /> : <DropdownDownIcon />;
-  }, [optionsShowCondition, displayOptionsOnTop]);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-    setDropdownShown(true);
-  };
-
-  const handleBlur = () => setDropdownShown(false);
-
-  const ref = useOutsideClick(handleBlur);
-
-  const handleFocus = () => setDropdownShown(true);
-
-  const handleItemClick = (text: string) => {
-    setInputValue(text);
-    setDropdownShown(false);
-  };
+  const handleChangeInputValue = (value: string) => setInputValue(value);
 
   return (
-    <div className={styles.container} ref={ref as React.Ref<HTMLDivElement>}>
-      {optionsShowCondition && displayOptionsOnTop && (
-        <DropdownList options={filteredOptions} onClick={handleItemClick} />
-      )}
-      <Input
-        className={styles.input}
-        value={inputValue}
-        iconRight={dropdownIcon}
-        iconRightClass={styles.iconRight}
-        onFocus={handleFocus}
-        onChange={handleChange}
-        autoComplete={autoComplete}
-        {...props}
-      />
-      {optionsShowCondition && !displayOptionsOnTop && (
-        <DropdownList options={filteredOptions} onClick={handleItemClick} />
-      )}
-    </div>
+    <InputDropdown
+      dropdownCustomClass={styles.container}
+      value={inputValue}
+      onInputChange={handleChangeInputValue}
+      autoComplete={autoComplete}
+      {...props}
+    >
+      {filteredOptions.map(({
+        text,
+        value,
+      }) => (
+        <div
+          key={[text, value].join()}
+          onClick={() => handleChangeInputValue(text)}
+          role="presentation"
+          className={styles.dropdownItem}
+        >
+          <TextBig>{text}</TextBig>
+        </div>
+      ))}
+    </InputDropdown>
   );
 };
 
